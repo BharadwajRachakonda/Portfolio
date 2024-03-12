@@ -1,0 +1,404 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} /*removing scroll bar*/
+nav ul li{
+    list-style-type: none;
+}
+nav ul{
+    height: 30px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+nav a{
+    border: 2px solid;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 10px;
+    font-size: 1vw;
+    margin: 0px;
+}
+nav li{
+    margin: 0px;
+}
+nav{
+    position: fixed;
+    width: 100vw;
+    top: -17px;
+    display: block;
+    z-index: 99;
+}
+#first{
+    margin-right: 30px;
+}
+nav a:hover{
+    transition: 0.5s;
+    background-color: rgb(151, 28, 57);
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(151, 28, 57, 0.084),
+  6.7px 6.7px 5.3px rgba(151, 28, 57, 0.121),
+  12.5px 12.5px 10px rgba(151, 28, 57, 0.15),
+  22.3px 22.3px 17.9px rgba(151, 28, 57, 0.179),
+  41.8px 41.8px 33.4px rgba(151, 28, 57, 0.216),
+  100px 100px 80px rgba(151, 28, 57, 0.3);
+}
+nav::after{
+    display: block;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.529),transparent);
+    content: 'h';
+    height: 60px;
+    color: transparent;
+    width: 100vw;
+    position: relative;
+    bottom: 17px;
+}/*navigation bar*/
+html{
+    scroll-snap-type: y mandatory;/*off in mobile view*/
+}
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    scroll-margin-top: 30px;
+    scroll-margin-bottom: -30px;
+}/*Adding scroll snap*/
+#home{
+    padding-left: 20px;
+    text-align: left;
+}
+#home h1{
+    margin-top: 100px;
+    padding-top: 100px;
+    font-size: 50px;
+    transition: 0.5s ease-in-out;
+}
+#home #line_through{
+    margin-left: 3vw !important;
+}
+#home:hover h1,#home:hover #line_through{
+    margin-left: 2vw;
+}
+#home img{
+    height: 285px;
+    display: inline;
+    z-index: 0;
+    position: absolute;
+    right: 20vw;
+    top: 45vh;
+    border-radius: 42% 58% 70% 30% / 48% 56% 44% 52% ;
+    border: 2px solid;
+    box-shadow:
+  0.2px 0px 2.2px rgba(151, 28, 57, 0.177),
+  0.5px 0px 5.3px rgba(151, 28, 57, 0.254),
+  1px 0px 10px rgba(151, 28, 57, 0.315),
+  1.8px 0px 17.9px rgba(151, 28, 57, 0.376),
+  3.3px 0px 33.4px rgba(151, 28, 57, 0.453),
+  8px 0px 80px rgba(151, 28, 57, 0.63);
+}/*My photo*/
+/*#home p:nth-child(6){
+}*/
+/*About*/
+#home p:last-child{
+    width: 45vw;
+}/*About description*/
+#linkedin, #linkedin i, #hackerrank, #hackerrank i, #leetcode, #leetcode i{
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.5s;
+    text-decoration: none;
+;/*need to change for mobile view*/
+}
+#linkedin i:hover, #hackerrank i:hover, #leetcode i:hover{
+    background-color: white;
+    color: black;
+}/*Icons and profiles*/
+#skills, #resume, #projects{
+    text-align: left;
+    padding-left: 20px;
+
+}
+#skills h2,#hireme h2, #resume h2, #projects h2, #certifications h2{
+    padding-top: 70px;
+    font-size: 40px;
+    transition: 1s;
+}/*Headings padding*/
+#skills:hover h2, #resume:hover h2, #projects:hover h2{
+    margin-left: 5vw;
+}
+@media only screen and (max-width: 1000px) {/*setting mobile view*/
+    #home img{
+        right: 5vw;
+        top: 300px;
+    }
+    #hireme h2, #skills h2,#hireme h2, #resume h2, #projects h2, #certifications h2{
+        padding-top: 0px;
+        font-size: 40px;
+    }
+    html{
+        scroll-snap-type: none;/*off in mobile view*/
+    }
+    section{
+        height: 700px;
+        scroll-snap-align: none;
+        scroll-snap-stop: unset;
+        scroll-margin-top: 0;
+        scroll-margin-bottom: 0;
+    }/*removing scroll snap*/
+}
+#skills ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80vw;/*change when I add more*/
+    height: 300px;
+}
+#skills ul li p{
+    font-size: 20px;
+    transition: 1s;
+}
+.sp{
+    display: inline-block;
+    width: 300px;
+    height: 15px;
+    background-color: white;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+#skills:hover p{
+    margin-left: 5vw;
+}
+#python,#html,#css{
+    border: 1px solid;
+    display: inline-block;
+    width: 0;/*Add new skills here*/
+    height: 15px;
+    border-radius: 20px;
+    background-color: lawngreen;
+    transition: width 2s ease-in-out;
+    box-shadow:  1.5px 1.5px 2.2px rgba(151, 28, 57, 0.143),  3.5px 3.7px 5.3px rgba(151, 28, 57, 0.206),  6.6px 7px 10px rgba(151, 28, 57, 0.255),  11.8px 12.5px 17.9px rgba(151, 28, 57, 0.304),  22.1px 23.4px 33.4px rgba(151, 28, 57, 0.367),  53px 56px 80px rgba(151, 28, 57, 0.51);
+}
+#skills:hover #python, #skills:hover #html{
+    width: 240px;
+}
+#java,#rsoftware{
+    border: 1px solid;
+    display: inline-block;
+    width: 0;
+    height: 15px;
+    border-radius: 20px;
+    background-color: goldenrod;
+    transition: width 2s ease-in-out;
+    box-shadow:  1.5px 1.5px 2.2px rgba(151, 28, 57, 0.143),  3.5px 3.7px 5.3px rgba(151, 28, 57, 0.206),  6.6px 7px 10px rgba(151, 28, 57, 0.255),  11.8px 12.5px 17.9px rgba(151, 28, 57, 0.304),  22.1px 23.4px 33.4px rgba(151, 28, 57, 0.367),  53px 56px 80px rgba(151, 28, 57, 0.51);
+}
+#skills:hover #java{
+    width: 180px;
+}
+#skills:hover #css{
+    width: 210px;
+}
+#skills:hover #rsoftware{
+    width: 150px;
+}/*skills*/
+#resume ul{
+    list-style-type: none;
+}
+#education{
+    text-align: left;
+}
+#resume ul li::before{/*change for mobile view just the education one*/
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    outline: 2px solid rgba(224, 44, 44, 0.736);
+    outline-offset: 3px;
+    background-image: linear-gradient(to right, rgba(228, 65, 65, 0.738),rgba(149, 149, 10, 0.742));
+}
+#resume h2{
+    transition: 1s;
+}
+#resume:hover h2{
+    margin-left: 5vw;
+}
+#resume ul li h4{
+    margin-top: 0;
+    display: inline-block;
+    padding-left: 20px;
+}
+#resume ul li p{
+    padding-left: 40px;
+    position: relative;
+    bottom: 35px;/*needed*/
+}
+#resume ul li{
+    margin-top: -8px;
+}
+#resume #educ{
+    text-align: left;
+    width: 500px;
+    padding-right: 5vw;
+}/*Education*//*Avoided summary by using #educ*/
+#resume div{
+    position: relative;
+    bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+#line_through{
+    background-image: linear-gradient(to right, red,yellow);
+    height: 2px;
+    width: 0;
+    position: relative;
+    bottom: 20px;
+    z-index: -1;
+    transition: width 2s, 0.5s;
+}
+#hireme:hover #line_through, #resume:hover #line_through, #skills:hover #line_through, #home:hover #line_through, #projects:hover #line_through, #certifications:hover #line_through{
+    width: 250px;/*redline width change*/
+    margin-left: 5vw;
+}/*resume*/
+#bottom{
+    width: 100vw;
+    height: 30px;
+    background-image: linear-gradient(transparent,rgba(255, 255, 255, 0.563));
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}/*bottom glow*/
+#certifications img{
+    width: 400px;
+}
+#proj{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+    flex-wrap: wrap;
+}
+.thecard{
+    height: 250px;
+    width: 250px;
+    background-color: #545454;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in;
+    margin: 1vw;
+    box-shadow: rgba(254, 254, 254, 0.35) 0px 5px 25px,
+    rgba(254, 254, 254, 0.35) 0px 5px 25px,
+    rgba(254, 254, 254, 0.35) 0px 5px 25px;
+} 
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+.thefront{
+    backface-visibility: hidden;
+    overflow: hidden;
+    text-align: center;
+}
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #fafafa;
+    color: #333;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theback a{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1, .theback h1{
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.thefront p, .theback p{
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+}
+#certifications h2{
+    margin-left: 5vw;
+}
+#hireme input{
+    height: 20px;
+    background-color: black;
+    border: 5px solid white;
+    border-top: 0px;
+    margin: 20px;
+    color: white;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: rgba(254, 254, 254, 0.35) 0px 5px 25px,
+    rgba(254, 254, 254, 0.35) 0px 5px 25px,
+    rgba(254, 254, 254, 0.35) 0px 5px 25px;
+}
+#hireme textarea{
+    height: 40px;
+    display: block;
+    margin: 20px;
+    border: 5px solid white;
+    background-color: black;
+    border-top: 0px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: rgba(254, 254, 254, 0.35) 0px 5px 25px,
+    rgba(254, 254, 254, 0.35) 0px 5px 25px,
+    rgba(254, 254, 254, 0.35) 0px 5px 25px;
+}
+#hireme div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+#hireme #line_through{
+    margin-left: 0vw !important;
+}
+#hireme h2{
+    padding-top: 0px;
+    font-size: 40px;
+}
