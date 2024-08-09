@@ -1,14 +1,17 @@
 {
+  "homepage": "https://BharadwajRachakonda.github.io/Portfolio",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "author": "Bharadwaj Rachakonda",
   "scripts": {
+    "predeploy": "npm run build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@headlessui/react": "^2.0.4",
