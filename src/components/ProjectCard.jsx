@@ -21,7 +21,12 @@ function ProjectCard(props) {
     props;
   return (
     <div className="hover:shadow-lg">
-      <ScrollAnimation animateIn="flipInY" animateOut="flipOutY" duration={3}>
+      <ScrollAnimation
+        animateIn="flipInY"
+        animateOut="flipOutY"
+        duration={1}
+        delay={50}
+      >
         <div
           id="scrolly-div"
           className={`max-w-sm rounded overflow-hidden shadow-lg ${

@@ -14,7 +14,10 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 function About(props) {
   return (
-    <div id="About" className="h-screen flex justify-center items-center">
+    <div
+      id="About"
+      className="h-screen flex justify-center items-center delay-75"
+    >
       <div className="flex flex-col gap-y-8 justify-center items-center z-10">
         <h1 className="text-3xl max-[768px]:text-xl">Skills</h1>
         <div>
@@ -28,6 +31,7 @@ function About(props) {
                   : `bg-gray-200 shadow-orange-400 hover:shadow-orange-400`)
               }
               duration={2}
+              delay={50}
             >
               <div className="flex flex-col justify-center items-center group">
                 <img
@@ -164,6 +168,7 @@ function About(props) {
                   : `bg-gray-200 shadow-green-400 hover:shadow-green-400`)
               }
               duration={2}
+              delay={50}
             >
               <div className="flex flex-col justify-center items-center group">
                 <img

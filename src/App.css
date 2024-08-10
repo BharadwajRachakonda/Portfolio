@@ -20,20 +20,22 @@
 
 @keyframes slide {
   0% {
-      transform: translateX(-25%);
+    transform: translateX(-25%);
   }
 
   100% {
-      transform: translateX(25%);
+    transform: translateX(25%);
   }
 }
 
-::selection{
+::selection {
   background: #7a5eec;
   color: white;
 }
 
-.newcursor, .newcursor2, .newcursor3{
+.newcursor,
+.newcursor2,
+.newcursor3 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -43,31 +45,30 @@
   z-index: 0;
 }
 
-.newcursor3{
+.newcursor3 {
   animation: moving 3s ease-in-out infinite;
 }
 
-.myimage{
-  border-radius: 63% 37% 69% 31% / 47% 59% 41% 53% ;
+.myimage {
+  border-radius: 63% 37% 69% 31% / 47% 59% 41% 53%;
   animation: moving 3s ease-in-out infinite;
 }
 
 @keyframes moving {
-  0%{
-      border-radius: 81% 19% 89% 11% / 19% 85% 15% 81% ;
+  0% {
+    border-radius: 81% 19% 89% 11% / 19% 85% 15% 81%;
   }
 
-  50%{
-      border-radius: 23% 77% 22% 78% / 78% 18% 82% 22% ;
+  50% {
+    border-radius: 23% 77% 22% 78% / 78% 18% 82% 22%;
   }
 
-  100%{
-      border-radius: 81% 19% 89% 11% / 19% 85% 15% 81% ;
+  100% {
+    border-radius: 81% 19% 89% 11% / 19% 85% 15% 81%;
   }
 }
 
 /* Add this to your CSS file or inside a <style> tag in your component */
-
 
 body {
   font-family: Arial, sans-serif;
@@ -77,4 +78,13 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
+  will-change: opacity;
 }
