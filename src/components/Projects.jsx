@@ -6,7 +6,10 @@ import ToDo from "./ToDoProj2.mp4";
 function Projects(props) {
   const { clr } = props; // Destructure clr from props
   return (
-    <div id="Projects" className="h-screen flex justify-center items-center">
+    <div
+      id="Projects"
+      className={`md:h-screen flex justify-center items-center`}
+    >
       <div className="flex flex-col gap-y-14 justify-center items-center z-10 w-full px-4">
         <br />
         <br />

@@ -89,6 +89,8 @@ export default function App() {
         <Dashboard clr={mode} />
         <About clr={mode} />
         <Projects clr={mode} />
+        <br />
+        <br />
         <AchievementsAndContact clr={mode} />
       </div>
     </div>
