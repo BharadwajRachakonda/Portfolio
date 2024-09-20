@@ -8,9 +8,9 @@ function Projects(props) {
   return (
     <div
       id="Projects"
-      className={`md:h-screen flex justify-center items-center`}
+      className={`z-0 md:h-screen flex justify-center items-center`}
     >
-      <div className="flex flex-col gap-y-14 justify-center items-center z-10 w-full px-4">
+      <div className="flex flex-col gap-y-14 justify-center items-center z-0 w-full px-4">
         <br />
         <br />
         <h1 className="text-3xl max-[768px]:text-xl">Projects</h1>

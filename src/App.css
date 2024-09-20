@@ -83,3 +83,48 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Card Styling */
+
+:root {
+  --card-color: rgb(25, 25, 25);
+}
+
+.card {
+  background-color: var(--card-color);
+  border-radius: 46px;
+  cursor: pointer;
+  position: relative;
+  height: 24rem;
+  width: 20rem;
+}
+
+.card-content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: grid;
+  inset: 1px;
+  padding: 1em;
+  position: absolute;
+}
+
+.card:before {
+  background: linear-gradient(
+    -45deg,
+    transparent 5%,
+    rgb(126, 248, 218) 50%,
+    transparent 99%
+  );
+  border-radius: inherit;
+  content: "";
+  inset: -0.1px;
+  position: absolute;
+  transition: opacity 400ms;
+  z-index: 0;
+  height: 24.15rem;
+  width: 20.15rem;
+}
+
+.shadow-card-skills {
+  box-shadow: 0px 18px 182.5px -60px rgb(126, 248, 218);
+}

@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import AchievementsAndContact from "./components/AchivementsandContact";
 import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
+import SkillState from "./context/skills/skillState";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
@@ -89,14 +90,16 @@ export default function App() {
               {mode === "dark" ? darkIcon : lightIcon}
             </div>
           </button>
-          <CustomCursor clr={mode} />
-          <BgAnimation clr={mode} />
-          <Dashboard clr={mode} />
-          <About clr={mode} />
-          <Projects clr={mode} />
-          <br />
-          <br />
-          <AchievementsAndContact clr={mode} />
+          <SkillState>
+            <CustomCursor clr={mode} />
+            <BgAnimation clr={mode} />
+            <Dashboard clr={mode} />
+            <About clr={mode} />
+            <Projects clr={mode} />
+            <br />
+            <br />
+            <AchievementsAndContact clr={mode} />
+          </SkillState>
         </div>
       </div>
     </>
