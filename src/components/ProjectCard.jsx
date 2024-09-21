@@ -13,6 +13,7 @@ import ScrollAnimation from "react-animate-on-scroll";
     skill1
     skill2
     skill3
+    github
 
     */
 
@@ -39,10 +40,12 @@ function ProjectCard(props) {
             <p className="text-base">{description}</p>
             <br />
             <ul className="text-white font-bold flex flex-row justify-between gap-10">
-              <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group hover:-translate-y-1">
-                <i className="fa-brands fa-github group-hover:animate-bounce"></i>
-                <a href={github}> GitHub</a>
-              </li>
+              <a target="_blank" href={github}>
+                <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group hover:-translate-y-1">
+                  <i className="fa-brands fa-github group-hover:animate-bounce"></i>
+                  GitHub
+                </li>
+              </a>
             </ul>
           </div>
           <div className="px-6 pt-4 pb-2">

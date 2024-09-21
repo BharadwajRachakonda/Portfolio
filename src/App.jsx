@@ -57,6 +57,10 @@ export default function App() {
     }
   };
 
+  /*In Developemnt or Not*/
+
+  const in_development = false;
+
   return (
     <>
       <meta
@@ -73,6 +77,7 @@ export default function App() {
           }
         >
           <Navbar />
+
           <button
             className="w-12 h-12 rounded-full bg-white opacity-75 flex items-center transition duration-300 focus:outline-none shadow top-20 right-5 md:right-20 z-50 fixed"
             onClick={() => {
@@ -93,6 +98,11 @@ export default function App() {
           <SkillState>
             <CustomCursor clr={mode} />
             <BgAnimation clr={mode} />
+            {in_development && (
+              <div className="absolute top-16 w-full h-5 bg-yellow-300 opacity-50 text-black text-center">
+                Under Development
+              </div>
+            )}
             <Dashboard clr={mode} />
             <About clr={mode} />
             <Projects clr={mode} />

@@ -50,25 +50,37 @@ function AchievementsAndContact(props) {
         <ul className="md:font-bold flex flex-row md:m-4 md:justify-between md:gap-10 flex-wrap gap-5 justify-around">
           <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
             <i className="fa-brands fa-linkedin group-hover:animate-bounce"></i>
-            <a href="https://www.linkedin.com/in/bharadwaj-rachakonda-b36658258/">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/bharadwaj-rachakonda-b36658258/"
+            >
               {" "}
               Linkedin
             </a>
           </li>
           <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
             <i className="fa-solid fa-laptop-code group-hover:animate-bounce"></i>
-            <a href="https://leetcode.com/rbharadwaj022/"> LeetCode</a>
+            <a target="_blank" href="https://leetcode.com/rbharadwaj022/">
+              {" "}
+              LeetCode
+            </a>
           </li>
           <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
             <i className="fa-brands fa-hackerrank group-hover:animate-bounce"></i>
-            <a href="https://www.hackerrank.com/profile/rbharadwaj022">
+            <a
+              target="_blank"
+              href="https://www.hackerrank.com/profile/rbharadwaj022"
+            >
               {" "}
               HackerRank
             </a>
           </li>
           <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
             <i className="fa-brands fa-github group-hover:animate-bounce"></i>
-            <a href="https://github.com/BharadwajRachakonda"> GitHub</a>
+            <a target="_blank" href="https://github.com/BharadwajRachakonda">
+              {" "}
+              GitHub
+            </a>
           </li>
         </ul>
       </div>

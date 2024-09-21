@@ -35,6 +35,14 @@ function Dashboard(props) {
         >
           Bharadwaj Rachakonda
         </h1>
+        <a
+          href="https://drive.google.com/file/d/1cjG3_ONmv6i6IjjGbhIgzdgQSBUvlv8T/view?usp=sharing"
+          target="_blank"
+        >
+          <p className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
+            Resume
+          </p>
+        </a>
         <p className="text-justify md:w-[50vw] mx-5 md:m-0">
           Hello, folks! I am Bharadwaj Rachakonda from Vijayawada, Andhra
           Pradesh. Currently, I am pursuing my B.Tech in AI & ML at VRSEC.
