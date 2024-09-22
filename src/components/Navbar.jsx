@@ -16,7 +16,7 @@ function Navbar(props) {
   }, [location]);
 
   return (
-    <nav className="absolute top-0 right-0 left-0 backdrop-blur-md z-50 drop-shadow-xl">
+    <nav className="absolute md:fixed top-0 right-0 left-0 backdrop-blur-md z-50 drop-shadow-xl">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
