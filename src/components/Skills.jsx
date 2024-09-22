@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import skillContext from "../context/skills/skillContext";
 
 function Skills(props) {
-  const { percentage, used_for, skill, image } = props;
+  const { percentage, used_for, skill, image, about } = props;
   const { setSkills } = useContext(skillContext);
 
   const close = () => {
@@ -10,7 +10,10 @@ function Skills(props) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-30 text-white">
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-30 text-white"
+      title={about}
+    >
       <div className="card">
         <div
           className={
@@ -45,9 +48,12 @@ function Skills(props) {
               </span>
               {percentage}%
             </div>
-            <div className="flex justify-center items-center gap-3">
-              <p>Used For:</p> <p>{used_for}</p>
-            </div>
+            {used_for && (
+              <div className="flex justify-center items-center gap-2 flex-col">
+                <p>Used For: </p>
+                <p className="text-center">{used_for}</p>
+              </div>
+            )}
           </div>
           <div onClick={close} className="cursor-pointer text-white">
             <div className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">

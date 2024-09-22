@@ -22,6 +22,7 @@ function About(props) {
     used_for: "",
     skill: "",
     image: "",
+    about: "",
   });
 
   return (
@@ -37,6 +38,7 @@ function About(props) {
             skill={info.skill}
             image={info.image}
             clr={props.clr}
+            about={info.about}
           />
         )}
         <h1 className="text-3xl max-[768px]:text-xl">Skills</h1>
@@ -61,6 +63,8 @@ function About(props) {
                     used_for: "DSA + LeetCode",
                     skill: "Python",
                     image: python,
+                    about:
+                      "python is a scripting language commanly used for machine learng, deep learning, data science, backend with flask / dijango.",
                   });
                   setSkills(true);
                 }}
@@ -91,6 +95,8 @@ function About(props) {
                     used_for: "DSA + IOT for EPICS",
                     skill: "CPP",
                     image: cpp,
+                    about:
+                      "CPP is a programing language commonly used for game development and IOT, CPP and JAVA are highly used to improve problem-solving skills.",
                   });
                   setSkills(true);
                 }}
@@ -118,9 +124,10 @@ function About(props) {
                 onClick={() => {
                   setInfo({
                     percentage: 60,
-                    used_for: "College",
                     skill: "Java",
                     image: java,
+                    about:
+                      "Java is a programing laguage that is both interprited and compiled. java is used mostly for web development using servlets / jsp / spring / spring boot.",
                   });
                   setSkills(true);
                 }}
@@ -148,9 +155,11 @@ function About(props) {
                 onClick={() => {
                   setInfo({
                     percentage: 80,
-                    used_for: "Web Development",
+                    used_for: "NewsAPP + ToDo on Cloud",
                     skill: "HTML",
                     image: html,
+                    about:
+                      "HTML is a markup language that has pre defined tags with a simillar structure to that of XML. It is used to define the structure of front end application.",
                   });
                   setSkills(true);
                 }}
@@ -178,9 +187,11 @@ function About(props) {
                 onClick={() => {
                   setInfo({
                     percentage: 80,
-                    used_for: "Web Development",
+                    used_for: "NewsAPP + ToDo on Cloud",
                     skill: "CSS",
                     image: css,
+                    about:
+                      "Cascading style sheets is a comman way to color you applicaton to make it more attractive and user friendly.",
                   });
                   setSkills(true);
                 }}
@@ -208,9 +219,11 @@ function About(props) {
                 onClick={() => {
                   setInfo({
                     percentage: 80,
-                    used_for: "Web Development",
+                    used_for: "NewsAPP + ToDo on Cloud + Portfolio",
                     skill: "Tailwind",
                     image: tailwind,
+                    about:
+                      "Tailwind is a extention to common CSS. It is a frame work that simplify's styling making development easyer.",
                   });
                   setSkills(true);
                 }}
@@ -238,9 +251,11 @@ function About(props) {
                 onClick={() => {
                   setInfo({
                     percentage: 60,
-                    used_for: "MERN Stack",
+                    used_for: "NewsAPP + ToDo on Cloud + Portfolio",
                     skill: "React",
                     image: re,
+                    about:
+                      "React is a JS library that involves state management, JSX, routing enabling less consumption of bandwidth and less reloads.",
                   });
                   setSkills(true);
                 }}
@@ -275,6 +290,8 @@ function About(props) {
                     used_for: "Design + Prototyping",
                     skill: "Figma",
                     image: figma,
+                    about:
+                      "Figma is a UI tool for Design and Prototyping giving a better view of what need to be developed.",
                   });
                   setSkills(true);
                 }}
@@ -302,9 +319,11 @@ function About(props) {
                 onClick={() => {
                   setInfo({
                     percentage: 60,
-                    used_for: "Backend Development",
+                    used_for: "ToDo on Cloud",
                     skill: "NodeJS",
                     image: node,
+                    about:
+                      "Node.JS is a backend framework on JS browser V8 engine. used to develop fullstack applications.",
                   });
                   setSkills(true);
                 }}
@@ -332,9 +351,11 @@ function About(props) {
                 onClick={() => {
                   setInfo({
                     percentage: 75,
-                    used_for: "Backend + Databases",
+                    used_for: "ToDo on Cloud",
                     skill: "MongoDB",
                     image: mongodb,
+                    about:
+                      "MongoDB is a No-SQL database that is schema flexible and stores data in BSON format and represents it in a JSON format.",
                   });
                   setSkills(true);
                 }}
@@ -362,9 +383,11 @@ function About(props) {
                 onClick={() => {
                   setInfo({
                     percentage: 60,
-                    used_for: "Backend Development",
+                    used_for: "ToDo on Cloud",
                     skill: "Express",
                     image: express,
+                    about:
+                      "Express is a framework on Node.JS used especially for web applications it makes easier to add middlewares, VERB methods, authentication.",
                   });
                   setSkills(true);
                 }}
@@ -372,7 +395,7 @@ function About(props) {
                 <img
                   src={express}
                   alt="Express"
-                  className={`group-hover:animate-none  h-12 w-12 inline-block    group-hover:scale-110 transition ease-in-out duration-75 `}
+                  className={`group-hover:animate-none  h-12 w-12 inline-block group-hover:scale-110 transition ease-in-out duration-75 `}
                 />
               </div>
             </ScrollAnimation>
