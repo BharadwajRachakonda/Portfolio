@@ -59,7 +59,7 @@ export default function App() {
 
   /*In Developemnt or Not*/
 
-  const in_development = False;
+  const in_development = false;
 
   return (
     <>
