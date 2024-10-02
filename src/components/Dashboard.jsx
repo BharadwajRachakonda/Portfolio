@@ -37,10 +37,10 @@ function Dashboard(props) {
         </h1>
         <div className="flex gap-10 justify-center items-center">
           <a
-            href="https://drive.google.com/file/d/1cjG3_ONmv6i6IjjGbhIgzdgQSBUvlv8T/view?usp=sharing"
+            href="https://BharadwajRachakonda.github.io/Portfolio/Resume.pdf"
             target="_blank"
           >
-            <p className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group text-white">
+            <p className="transition-all rounded-md delay-150 duration-300 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group text-white">
               Resume
             </p>
           </a>
@@ -48,7 +48,7 @@ function Dashboard(props) {
             href="https://drive.google.com/drive/folders/18TjnxUndk-zkWh3GVeAZL69oRu-cRPwC?usp=sharing"
             target="_blank"
           >
-            <p className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group text-white">
+            <p className="transition-all rounded-md delay-150 duration-300 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group text-white">
               Certificates
             </p>
           </a>
