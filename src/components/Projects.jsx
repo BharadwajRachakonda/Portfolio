@@ -34,6 +34,7 @@ function Projects(props) {
             skill2="Tailwind"
             skill3="API"
             github="https://github.com/BharadwajRachakonda/ToDo-on-Cloud"
+            deployed="https://bharadwajrachakonda.github.io/todo-frontend/"
           />
         </div>
       </div>

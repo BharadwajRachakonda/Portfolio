@@ -18,8 +18,17 @@ import ScrollAnimation from "react-animate-on-scroll";
     */
 
 function ProjectCard(props) {
-  let { video, clr, title, description, skill1, skill2, skill3, github } =
-    props;
+  let {
+    video,
+    clr,
+    title,
+    description,
+    skill1,
+    skill2,
+    skill3,
+    github,
+    deployed,
+  } = props;
   return (
     <div className="hover:shadow-lg">
       <ScrollAnimation
@@ -46,6 +55,13 @@ function ProjectCard(props) {
                   GitHub
                 </li>
               </a>
+              {deployed && (
+                <a href={deployed} target="_blank">
+                  <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group hover:-translate-y-1">
+                    Visit Here
+                  </li>
+                </a>
+              )}
             </ul>
           </div>
           <div className="px-6 pt-4 pb-2">
