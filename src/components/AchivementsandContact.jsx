@@ -60,7 +60,7 @@ function AchievementsAndContact(props) {
           </li>
           <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
             <i className="fa-solid fa-laptop-code group-hover:animate-bounce"></i>
-            <a target="_blank" href="https://leetcode.com/rbharadwaj022/">
+            <a target="_blank" href="https://leetcode.com/BharadwajRachakonda/">
               {" "}
               LeetCode
             </a>
