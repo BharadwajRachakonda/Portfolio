@@ -9,12 +9,19 @@ import AchievementsAndContact from "./components/AchivementsandContact";
 import { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import SkillState from "./context/skills/skillState";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
 
   useEffect(() => {
-    alert(`Moving to ${mode} Mode`);
+    toast.success(`Moving to ${mode} Mode`, {
+      style: {
+        marginTop: "40px",
+        background: `${mode === "dark" ? "#333" : "#fff"}`,
+        color: `${mode === "light" ? "#333" : "#fff"}`,
+      },
+    });
   }, [mode]);
 
   const darkIcon = (
@@ -59,7 +66,7 @@ export default function App() {
 
   /*In Developemnt or Not*/
 
-  const in_development = /*true; */ false;
+  const in_development = true; /* false;*/
 
   return (
     <>
@@ -77,7 +84,7 @@ export default function App() {
           }
         >
           <Navbar />
-
+          <Toaster />
           <button
             className="w-12 h-12 rounded-full bg-white opacity-75 flex items-center transition duration-300 focus:outline-none shadow top-20 right-5 md:right-20 z-50 fixed"
             onClick={() => {
