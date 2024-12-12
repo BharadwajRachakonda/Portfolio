@@ -30,9 +30,16 @@ function Dashboard(props) {
             `relative text-5xl max-[768px]:text-3xl bg-clip-text text-transparent bg-gradient-to-r font-serif ` +
             (props.clr === "dark"
               ? `from-white to-gray-400`
-              : `from-slate-900 to-indigo-600`)
+              : `from-slate-900 to-indigo-600`) +
+            // Applying normal font on mobile
+            " max-[768px]:font-normal"
           }
-          style={{ fontFamily: "'Cinzel', serif" }}
+          style={{
+            fontFamily:
+              window.innerWidth > 768
+                ? "'Cinzel', serif"
+                : "'Roboto', sans-serif", // Normal font for mobile, Cinzel for others
+          }}
         >
           <span
             className={
