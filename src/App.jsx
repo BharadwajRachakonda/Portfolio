@@ -12,22 +12,22 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
-  const [showPopup, setShowPopup] = useState(false); // Popup state
+  const [showPopup, setShowPopup] = useState(false);
   const firstLoad = useRef(true); // Use useRef for first-load tracking
-  const [isMobile, setIsMobile] = useState(false); // State for mobile detection
+  const [isMobile, setIsMobile] = useState(false);
 
   /* In Development or Not */
-  const inDevelopment = true;
+  const inDevelopment = /*true;*/ false;
 
-  const handlePopup = () => {
-    setShowPopup(true); // Show popup
+  const handlePopup = (t) => {
+    toast.dismiss(t.id); // Dismiss the current toast
+    setShowPopup(true);
   };
 
   const closePopup = () => {
-    setShowPopup(false); // Close popup
+    setShowPopup(false);
   };
 
-  // Check if the device is mobile
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth <= 768); // 768px is commonly used for mobile breakpoint
@@ -45,7 +45,7 @@ export default function App() {
     if (firstLoad.current) {
       // For the first load
       if (window.innerWidth > 768) {
-        toast.custom(() => (
+        toast.custom((t) => (
           <div
             style={{
               marginTop: "40px",
@@ -56,13 +56,15 @@ export default function App() {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              transition: "opacity 0.5s ease-in-out",
+              opacity: t.visible ? 1 : 0,
             }}
           >
             <p className="inline-block">
               Welcome! Check out the Lighthouse Score:
             </p>
             <button
-              onClick={handlePopup}
+              onClick={() => handlePopup(t)}
               style={{
                 backgroundColor: "#007BFF",
                 color: "white",
@@ -81,7 +83,6 @@ export default function App() {
       }
       firstLoad.current = false; // Update first load to false
     } else {
-      // For subsequent mode changes
       toast.success(`Moving to ${mode} Mode`, {
         style: {
           marginTop: "40px",
@@ -136,44 +137,46 @@ export default function App() {
       />
       <div>
         <Toaster />
-        {showPopup &&
-          !isMobile && ( // Only show the popup if it's not a mobile device
-            <div
+        {showPopup && !isMobile && (
+          <div
+            className={`transition-all duration-500 ease-out ${
+              showPopup ? "opacity-100 scale-100" : "opacity-0 scale-0"
+            }`}
+            style={{
+              position: "fixed",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              backgroundColor: mode === "dark" ? "#333" : "#fff",
+              color: mode === "dark" ? "#fff" : "#333",
+              padding: "2rem",
+              borderRadius: "8px",
+              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+              zIndex: 1000,
+            }}
+          >
+            <h3 style={{ marginBottom: "1rem" }}>Lighthouse Score</h3>
+            <img
+              src="./image.png"
+              alt="Lighthouse Score"
+              style={{ width: "100%", borderRadius: "5px" }}
+            />
+            <button
+              onClick={closePopup}
               style={{
-                position: "fixed",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                backgroundColor: mode === "dark" ? "#333" : "#fff", // Dynamic background color
-                color: mode === "dark" ? "#fff" : "#333", // Dynamic text color
-                padding: "2rem",
-                borderRadius: "8px",
-                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                zIndex: 1000,
+                marginTop: "1rem",
+                backgroundColor: "black",
+                color: "white",
+                padding: "0.5rem 1rem",
+                borderRadius: "5px",
+                border: "none",
+                cursor: "pointer",
               }}
             >
-              <h3 style={{ marginBottom: "1rem" }}>Lighthouse Score</h3>
-              <img
-                src="./image.png"
-                alt="Lighthouse Score"
-                style={{ width: "100%", borderRadius: "5px" }}
-              />
-              <button
-                onClick={closePopup}
-                style={{
-                  marginTop: "1rem",
-                  backgroundColor: "#FF0000", // Close button background
-                  color: "white", // Close button text color
-                  padding: "0.5rem 1rem",
-                  borderRadius: "5px",
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
-                Close
-              </button>
-            </div>
-          )}
+              Close
+            </button>
+          </div>
+        )}
 
         <div
           className={`${
