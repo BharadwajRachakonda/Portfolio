@@ -13,6 +13,9 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
+  /*In Developemnt or Not*/
+
+  const in_development = /*true; */ false;
 
   useEffect(() => {
     toast.success(`Moving to ${mode} Mode`, {
@@ -63,10 +66,6 @@ export default function App() {
       setMode("dark");
     }
   };
-
-  /*In Developemnt or Not*/
-
-  const in_development = true; /* false;*/
 
   return (
     <>
