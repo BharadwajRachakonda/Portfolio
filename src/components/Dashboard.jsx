@@ -27,14 +27,39 @@ function Dashboard(props) {
         />
         <h1
           className={
-            ` text-5xl max-[768px]:text-3xl bg-clip-text text-transparent bg-gradient-to-r ` +
+            `relative text-5xl max-[768px]:text-3xl bg-clip-text text-transparent bg-gradient-to-r font-serif ` +
             (props.clr === "dark"
-              ? `from-white to-gray-600`
+              ? `from-white to-gray-400`
               : `from-slate-900 to-indigo-600`)
           }
+          style={{ fontFamily: "'Cinzel', serif" }}
         >
-          Bharadwaj Rachakonda
+          <span
+            className={
+              `relative inline-block ` +
+              (props.clr === "dark" ? `text-white` : `text-slate-900`)
+            }
+          >
+            Bharadwaj
+            <svg
+              className="absolute left-0 bottom-[-10px]"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 200 20"
+              width="100%"
+              height="20"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M10 10 Q 100 30 190 10"
+                fill="transparent"
+                stroke="red"
+                strokeWidth="3"
+              />
+            </svg>
+          </span>{" "}
+          Rachakonda
         </h1>
+
         <div className="flex gap-10 justify-center items-center">
           <a
             href="https://BharadwajRachakonda.github.io/Portfolio/Resume.pdf"
