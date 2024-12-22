@@ -6,23 +6,17 @@ import Dashboard from "./components/Dashboard";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import AchievementsAndContact from "./components/AchivementsandContact";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import SkillState from "./context/skills/skillState";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
   const [showPopup, setShowPopup] = useState(false);
-  const firstLoad = useRef(true); // Use useRef for first-load tracking
   const [isMobile, setIsMobile] = useState(false);
 
   /* In Development or Not */
   const inDevelopment = /*true;*/ false;
-
-  const handlePopup = (t) => {
-    toast.dismiss(t.id); // Dismiss the current toast
-    setShowPopup(true);
-  };
 
   const closePopup = () => {
     setShowPopup(false);
@@ -42,55 +36,13 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (firstLoad.current) {
-      // For the first load
-      if (window.innerWidth > 768) {
-        toast.custom((t) => (
-          <div
-            style={{
-              marginTop: "40px",
-              backgroundColor: mode === "dark" ? "#333" : "#fff",
-              color: mode === "light" ? "#333" : "#fff",
-              padding: "1rem",
-              borderRadius: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              transition: "opacity 0.5s ease-in-out",
-              opacity: t.visible ? 1 : 0,
-            }}
-          >
-            <p className="inline-block">
-              Welcome! Check out the Lighthouse Score:
-            </p>
-            <button
-              onClick={() => handlePopup(t)}
-              style={{
-                backgroundColor: "#007BFF",
-                color: "white",
-                padding: "0.5rem 1rem",
-                borderRadius: "5px",
-                border: "none",
-                cursor: "pointer",
-                marginLeft: "1rem",
-                display: "inline-block",
-              }}
-            >
-              View Score
-            </button>
-          </div>
-        ));
-      }
-      firstLoad.current = false; // Update first load to false
-    } else {
-      toast.success(`Moving to ${mode} Mode`, {
-        style: {
-          marginTop: "40px",
-          background: mode === "dark" ? "#333" : "#fff",
-          color: mode === "light" ? "#333" : "#fff",
-        },
-      });
-    }
+    toast.success(`Moving to ${mode} Mode`, {
+      style: {
+        marginTop: "40px",
+        background: mode === "dark" ? "#333" : "#fff",
+        color: mode === "light" ? "#333" : "#fff",
+      },
+    });
   }, [mode, isMobile]);
 
   const darkIcon = (
