@@ -25,6 +25,7 @@ function Dashboard(props) {
               `,
           }}
         />
+
         <h1
           className={
             `relative text-5xl max-[768px]:text-3xl bg-clip-text text-transparent bg-gradient-to-r font-serif ` +
@@ -41,6 +42,12 @@ function Dashboard(props) {
                 : "'Roboto', sans-serif", // Normal font for mobile, Cinzel for others
           }}
         >
+          <hr
+            className={
+              `hidden md:block w-full border-t-2 border-dashed ` +
+              (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
+            }
+          />
           <span
             className={
               `relative inline-block ` +
@@ -48,23 +55,31 @@ function Dashboard(props) {
             }
           >
             Bharadwaj
-            <svg
-              className="absolute left-0 bottom-[-10px]"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 200 20"
-              width="100%"
-              height="20"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M10 10 Q 100 30 190 10"
-                fill="transparent"
-                stroke="red"
-                strokeWidth="3"
-              />
-            </svg>
+            {window.innerWidth <= 337 && (
+              <svg
+                className="absolute left-0 bottom-[-10px]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 200 20"
+                width="100%"
+                height="20"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M10 10 Q 100 30 190 10"
+                  fill="transparent"
+                  stroke="red"
+                  strokeWidth="3"
+                />
+              </svg>
+            )}
           </span>{" "}
-          Rachakonda
+          {window.innerWidth >= 337 && <>Rachakonda</>}
+          <hr
+            className={
+              `hidden md:block w-full border-t-2 border-dashed ` +
+              (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
+            }
+          />
         </h1>
 
         <div className="flex gap-10 justify-center items-center">
@@ -72,7 +87,7 @@ function Dashboard(props) {
             href="https://BharadwajRachakonda.github.io/Portfolio/Resume.pdf"
             target="_blank"
           >
-            <p className="transition-all rounded-md delay-150 duration-300 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group text-white">
+            <p className="transition-all rounded-md duration-150 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group text-white">
               Resume
             </p>
           </a>
@@ -80,20 +95,20 @@ function Dashboard(props) {
             href="https://drive.google.com/drive/folders/18TjnxUndk-zkWh3GVeAZL69oRu-cRPwC?usp=sharing"
             target="_blank"
           >
-            <p className="transition-all rounded-md delay-150 duration-300 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group text-white">
+            <p className="transition-all rounded-md duration-150 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group text-white">
               Certificates
             </p>
           </a>
         </div>
         <p className="text-justify md:w-[50vw] mx-5 md:m-0">
-          Hello, folks! I am Bharadwaj Rachakonda from Vijayawada, Andhra
-          Pradesh. Currently, I am pursuing my B.Tech in AI & ML at VRSEC.
-          Aspiring to become a FullStack developer, I have acquired several
-          skills during these semesters, including Tailwind, React.js, C++, and
-          Python. I have also completed certifications in Foundations of R
-          Software, Joy of Computing using Python, and Programming in Modern CPP
-          through NPTEL. I think its always better to take some break and make
-          some notes once in a while.
+          I am Bharadwaj Rachakonda, a B.Tech student specializing in Artificial
+          Intelligence and Machine Learning at Velagapudi Ramakrishna Siddhartha
+          Engineering College. With a passion for innovation, I combine
+          technical skills in programming, full-stack development, and
+          user-centric design to create impactful solutions. I thrive on
+          problem-solving, competitive programming, and continuous learning to
+          shape a meaningful contribution to the tech world. Let’s build
+          something amazing together!
         </p>
       </div>
     </div>

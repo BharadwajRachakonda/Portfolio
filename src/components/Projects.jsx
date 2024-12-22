@@ -13,7 +13,15 @@ function Projects(props) {
       <div className="flex flex-col gap-y-14 justify-center items-center z-0 w-full px-4">
         <br />
         <br />
-        <h1 className="text-3xl max-[768px]:text-xl">Projects</h1>
+        <h1 className="text-3xl max-[768px]:text-xl">
+          Projects
+          <hr
+            className={
+              `hidden md:block w-full border-t-2 border-dashed ` +
+              (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
+            }
+          />
+        </h1>
         <div className="flex flex-row gap-4 md:gap-2 flex-wrap md:m-0 h-auto md:w-screen justify-around">
           <ProjectCard
             video={News}

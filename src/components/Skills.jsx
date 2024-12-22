@@ -56,7 +56,7 @@ function Skills(props) {
             )}
           </div>
           <div onClick={close} className="cursor-pointer text-white">
-            <div className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
+            <div className="transition-all rounded-md duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
               Close
             </div>
           </div>

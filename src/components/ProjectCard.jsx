@@ -50,14 +50,14 @@ function ProjectCard(props) {
             <br />
             <ul className="text-white font-bold flex flex-row justify-between gap-10">
               <a target="_blank" href={github}>
-                <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group hover:-translate-y-1">
+                <li className="transition-all rounded-md  duration-150 ease-in-out p-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group hover:-translate-y-1">
                   <i className="fa-brands fa-github group-hover:animate-bounce"></i>
                   GitHub
                 </li>
               </a>
               {deployed && (
                 <a href={deployed} target="_blank">
-                  <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group hover:-translate-y-1">
+                  <li className="transition-all rounded-md  duration-150 ease-in-out p-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group hover:-translate-y-1">
                     Visit Here
                   </li>
                 </a>

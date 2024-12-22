@@ -8,7 +8,7 @@ import React from "react";
 
 function AchievementsAndContact(props) {
   return (
-    <div className="w-full md:flex flex-row items-center bg-slate-800 text-white rounded-t-3xl md:p-0 p-10">
+    <div className="w-full md:flex flex-row items-center bg-slate-800 text-white rounded-t-3xl md:p-0 p-10 mt-5">
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,8 +17,16 @@ function AchievementsAndContact(props) {
         referrerPolicy="no-referrer"
       />
       <div className="flex flex-col items-center z-10">
-        <ul className="md:font-bold justify-around md:m-4">
-          <h2 className="text-lg">Achievements</h2>
+        <ul className="md:font-bold justify-around md:m-4 md:border-r-2 border-gray-600 md:pr-3">
+          <h2 className="text-lg">
+            Achievements
+            <hr
+              className={
+                `hidden md:block w-36 border-t-2 border-dashed ` +
+                (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
+              }
+            />
+          </h2>
           <br />
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> 5 star
@@ -45,10 +53,18 @@ function AchievementsAndContact(props) {
       </div>
       <br />
       <div className="flex flex-col z-10">
-        <h2 className="text-lg font-bold md:m-4">Contact</h2>
+        <h2 className="text-lg font-bold md:m-4">
+          Contact
+          <hr
+            className={
+              `hidden md:block w-20 border-t-2 border-dashed ` +
+              (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
+            }
+          />
+        </h2>
         <br />
         <ul className="md:font-bold flex flex-row md:m-4 md:justify-between md:gap-10 flex-wrap gap-5 justify-around">
-          <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
+          <li className="transition-all rounded-md  duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
             <i className="fa-brands fa-linkedin group-hover:animate-bounce"></i>
             <a
               target="_blank"
@@ -58,14 +74,14 @@ function AchievementsAndContact(props) {
               Linkedin
             </a>
           </li>
-          <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
+          <li className="transition-all rounded-md  duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
             <i className="fa-solid fa-laptop-code group-hover:animate-bounce"></i>
             <a target="_blank" href="https://leetcode.com/BharadwajRachakonda/">
               {" "}
               LeetCode
             </a>
           </li>
-          <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
+          <li className="transition-all rounded-md  duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
             <i className="fa-brands fa-hackerrank group-hover:animate-bounce"></i>
             <a
               target="_blank"
@@ -75,7 +91,7 @@ function AchievementsAndContact(props) {
               HackerRank
             </a>
           </li>
-          <li className="transition-all rounded-md delay-150 duration-300 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-125 hover:tracking-widest group">
+          <li className="transition-all rounded-md  duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
             <i className="fa-brands fa-github group-hover:animate-bounce"></i>
             <a target="_blank" href="https://github.com/BharadwajRachakonda">
               {" "}
