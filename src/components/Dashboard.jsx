@@ -82,24 +82,26 @@ function Dashboard(props) {
           />
         </h1>
 
-        <div className="flex gap-10 justify-center items-center">
-          <a
-            href="https://BharadwajRachakonda.github.io/Portfolio/Resume.pdf"
-            target="_blank"
-          >
-            <p className="transition-all rounded-md duration-150 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group text-white">
-              Resume
-            </p>
-          </a>
-          <a
-            href="https://drive.google.com/drive/folders/18TjnxUndk-zkWh3GVeAZL69oRu-cRPwC?usp=sharing"
-            target="_blank"
-          >
-            <p className="transition-all rounded-md duration-150 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group text-white">
-              Certificates
-            </p>
-          </a>
-        </div>
+        {window.innerWidth > 760 && (
+          <div className="flex gap-10 justify-center items-center">
+            <a
+              href="https://BharadwajRachakonda.github.io/Portfolio/Resume.pdf"
+              target="_blank"
+            >
+              <p className="transition-all rounded-md duration-150 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group text-white">
+                Resume
+              </p>
+            </a>
+            <a
+              href="https://drive.google.com/drive/folders/18TjnxUndk-zkWh3GVeAZL69oRu-cRPwC?usp=sharing"
+              target="_blank"
+            >
+              <p className="transition-all rounded-md duration-150 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group text-white">
+                Certificates
+              </p>
+            </a>
+          </div>
+        )}
         <p className="text-justify md:w-[50vw] mx-5 md:m-0">
           I am Bharadwaj Rachakonda, a B.Tech student specializing in Artificial
           Intelligence and Machine Learning at Velagapudi Ramakrishna Siddhartha

@@ -12,28 +12,8 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
-  const [showPopup, setShowPopup] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
   /* In Development or Not */
   const inDevelopment = /*true;*/ false;
-
-  const closePopup = () => {
-    setShowPopup(false);
-  };
-
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // 768px is commonly used for mobile breakpoint
-    };
-
-    checkIfMobile(); // Run on mount
-    window.addEventListener("resize", checkIfMobile); // Listen for window resize
-
-    return () => {
-      window.removeEventListener("resize", checkIfMobile); // Clean up event listener
-    };
-  }, []);
 
   useEffect(() => {
     toast.success(`Moving to ${mode} Mode`, {
@@ -43,7 +23,7 @@ export default function App() {
         color: mode === "light" ? "#333" : "#fff",
       },
     });
-  }, [mode, isMobile]);
+  }, [mode]);
 
   const darkIcon = (
     <svg
@@ -89,46 +69,6 @@ export default function App() {
       />
       <div>
         <Toaster />
-        {showPopup && !isMobile && (
-          <div
-            className={`transition-all duration-500 ease-out ${
-              showPopup ? "opacity-100 scale-100" : "opacity-0 scale-0"
-            }`}
-            style={{
-              position: "fixed",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              backgroundColor: mode === "dark" ? "#333" : "#fff",
-              color: mode === "dark" ? "#fff" : "#333",
-              padding: "2rem",
-              borderRadius: "8px",
-              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-              zIndex: 1000,
-            }}
-          >
-            <h3 style={{ marginBottom: "1rem" }}>Lighthouse Score</h3>
-            <img
-              src="./image.png"
-              alt="Lighthouse Score"
-              style={{ width: "100%", borderRadius: "5px" }}
-            />
-            <button
-              onClick={closePopup}
-              style={{
-                marginTop: "1rem",
-                backgroundColor: "black",
-                color: "white",
-                padding: "0.5rem 1rem",
-                borderRadius: "5px",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              Close
-            </button>
-          </div>
-        )}
 
         <div
           className={`${
