@@ -54,7 +54,7 @@ function Projects(props) {
             skill2="Tailwind"
             skill3="API"
             github="https://github.com/BharadwajRachakonda/Supragna"
-            deployed="https://www.bharadwajrachakonda.me/Supragna/"
+            deployed="https://bharadwajrachakonda.github.io/Supragna/"
           />
         </div>
       </div>
