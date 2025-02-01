@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import News from "./NewsAPIProj1.mp4";
 import ToDo from "./ToDoProj2.mp4";
+import Supragna from "./SupragnaProj3.mp4";
 
 function Projects(props) {
   const { clr } = props; // Destructure clr from props
@@ -43,6 +44,17 @@ function Projects(props) {
             skill3="API"
             github="https://github.com/BharadwajRachakonda/ToDo-on-Cloud"
             deployed="https://bharadwajrachakonda.github.io/todo-frontend/"
+          />
+          <ProjectCard
+            video={Supragna}
+            clr={clr}
+            title="ToDo on Cloud"
+            description="A MERN Project that stores a Create, manage, and share to-do lists"
+            skill1="MERN"
+            skill2="Tailwind"
+            skill3="API"
+            github="https://github.com/BharadwajRachakonda/Supragna"
+            deployed="https://www.bharadwajrachakonda.me/Supragna/"
           />
         </div>
       </div>

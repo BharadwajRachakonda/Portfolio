@@ -1,6 +1,6 @@
 import React from "react";
 import VideoPlayer from "./VideoPlayer";
-import ScrollAnimation from "react-animate-on-scroll";
+import { motion } from "framer-motion";
 
 /*
     
@@ -31,11 +31,10 @@ function ProjectCard(props) {
   } = props;
   return (
     <div className="hover:shadow-lg">
-      <ScrollAnimation
-        animateIn="flipInY"
-        animateOut="flipOutY"
-        duration={1}
-        delay={50}
+      <motion.div
+        initial={{ opacity: 0, rotateY: 30 }}
+        whileInView={{ opacity: 1, rotateY: 0 }}
+        transition={{ duration: 1 }}
       >
         <div
           id="scrolly-div"
@@ -94,7 +93,7 @@ function ProjectCard(props) {
             </span>
           </div>
         </div>
-      </ScrollAnimation>
+      </motion.div>
     </div>
   );
 }
