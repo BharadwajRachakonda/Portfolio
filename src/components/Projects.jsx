@@ -48,8 +48,8 @@ function Projects(props) {
           <ProjectCard
             video={Supragna}
             clr={clr}
-            title="ToDo on Cloud"
-            description="A MERN Project that stores a Create, manage, and share to-do lists"
+            title="Supragna"
+            description="I developed the webpage for SUPRAGNA, the national-level fest of SAHE."
             skill1="HTML"
             skill2="CSS"
             skill3="JS"
