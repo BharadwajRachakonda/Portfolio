@@ -50,9 +50,9 @@ function Projects(props) {
             clr={clr}
             title="ToDo on Cloud"
             description="A MERN Project that stores a Create, manage, and share to-do lists"
-            skill1="MERN"
-            skill2="Tailwind"
-            skill3="API"
+            skill1="HTML"
+            skill2="CSS"
+            skill3="JS"
             github="https://github.com/BharadwajRachakonda/Supragna"
             deployed="https://bharadwajrachakonda.github.io/Supragna/"
           />
