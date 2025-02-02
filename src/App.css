@@ -128,3 +128,16 @@ html {
 .shadow-card-skills {
   box-shadow: 0px 18px 182.5px -60px rgb(126, 248, 218);
 }
+
+.animate-line {
+  animation: widthHr 2s forwards 2ms 1 ease-in-out;
+}
+
+@keyframes widthHr {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

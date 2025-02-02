@@ -4,6 +4,7 @@ import skillContext from "../context/skills/skillContext";
 import { Route, Routes, Link } from "react-router-dom";
 import Web from "./Web";
 import Programming from "./Programming";
+import { motion } from "framer-motion";
 
 function About(props) {
   const context = useContext(skillContext);
@@ -31,7 +32,11 @@ function About(props) {
         )}
         <h1 className="text-3xl max-[768px]:text-xl">
           Skills
-          <hr
+          <motion.hr
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }} // Ensures the animation only triggers once when it comes into view
             className={
               `hidden md:block max-w-20 border-t-2 border-dashed ` +
               (props.clr == `light` ? `border-gray-600` : `border-gray-400`)

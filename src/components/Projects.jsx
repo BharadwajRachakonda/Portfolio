@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import News from "./NewsAPIProj1.mp4";
 import ToDo from "./ToDoProj2.mp4";
 import Supragna from "./SupragnaProj3.mp4";
+import { motion } from "framer-motion";
 
 function Projects(props) {
   const { clr } = props; // Destructure clr from props
@@ -16,7 +17,11 @@ function Projects(props) {
         <br />
         <h1 className="text-3xl max-[768px]:text-xl">
           Projects
-          <hr
+          <motion.hr
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
             className={
               `hidden md:block w-full border-t-2 border-dashed ` +
               (props.clr == `light` ? `border-gray-600` : `border-gray-400`)

@@ -44,7 +44,7 @@ function Dashboard(props) {
         >
           <hr
             className={
-              `hidden md:block w-full border-t-2 border-dashed ` +
+              `hidden md:block w-full border-t-2 border-dashed animate-line ` +
               (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
             }
           />
@@ -76,7 +76,7 @@ function Dashboard(props) {
           {window.innerWidth >= 337 && <>Rachakonda</>}
           <hr
             className={
-              `hidden md:block w-full border-t-2 border-dashed ` +
+              `hidden md:block w-full border-t-2 border-dashed animate-line ` +
               (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
             }
           />

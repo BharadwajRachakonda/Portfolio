@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 /*
   AcheivementsandContact takes props
 
@@ -20,7 +21,11 @@ function AchievementsAndContact(props) {
         <ul className="md:font-bold justify-around md:m-4 md:border-r-2 border-gray-600 md:pr-3">
           <h2 className="text-lg">
             Achievements
-            <hr
+            <motion.hr
+              initial={{ width: 0 }}
+              whileInView={{ width: 144 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
               className={
                 `hidden md:block w-36 border-t-2 border-dashed ` +
                 (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
@@ -55,7 +60,11 @@ function AchievementsAndContact(props) {
       <div className="flex flex-col z-10">
         <h2 className="text-lg font-bold md:m-4">
           Contact
-          <hr
+          <motion.hr
+            initial={{ width: 0 }}
+            whileInView={{ width: 80 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
             className={
               `hidden md:block w-20 border-t-2 border-dashed ` +
               (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
