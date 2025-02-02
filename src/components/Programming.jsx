@@ -40,7 +40,7 @@ const skills = [
 function Programming({ setInfo, setSkills, clr }) {
   return (
     <div>
-      <div className="flex flex-wrap gap-6 justify-around h-auto md:h-52 md:w-screen max-w-7xl z-10 pt-10">
+      <div className="flex flex-wrap gap-6 justify-center md:justify-around h-auto md:h-52 md:w-screen max-w-7xl z-10 pt-10">
         {skills.map((skill, index) => (
           <motion.div
             key={skill.name}

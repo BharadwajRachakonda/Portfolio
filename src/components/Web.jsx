@@ -88,7 +88,7 @@ function Web(props) {
 
   return (
     <div>
-      <div className="flex gap-6 md:gap-2 flex-wrap md:m-0 h-auto md:h-52 md:w-screen justify-around max-w-7xl z-10 pt-10">
+      <div className="flex gap-6 md:gap-2 flex-wrap md:m-0 h-auto md:h-52 md:w-screen justify-center md:justify-around max-w-7xl z-10 pt-10">
         {skills.map((item, index) => (
           <motion.div
             key={item.skill}
