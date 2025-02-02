@@ -13,9 +13,9 @@ function Dashboard(props) {
         <div className="myimageParent">
           <img
             src={self}
-            alt=""
+            alt="My Image"
             className={
-              `delay-150 h-0 md:visible md:h-36 md:w-36 cursor-pointer myimage hover:scale-110 ease-in-out transition md:border-2 ` +
+              `delay-150 h-0 md:visible md:h-36 md:w-36 cursor-pointer myimage hover:scale-110 ease-in-out transition md:border-2` +
               (props.clr === "dark" ? `border-white` : `border-transparent`)
             }
             style={{
@@ -77,7 +77,7 @@ function Dashboard(props) {
           {window.innerWidth >= 337 && <>Rachakonda</>}
           <hr
             className={
-              `hidden md:block w-full border-t-2 border-dashed animate-line ` +
+              `hidden md:block w-full border-t-2 border-dashed animate-line-back ` +
               (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
             }
           />

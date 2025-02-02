@@ -46,7 +46,7 @@ function About(props) {
         <div>
           <div className="flex justify-center gap-5 md:m-0 m-5">
             <Link
-              to="/"
+              to="/Portfolio/"
               className="border-2 border-x-gray-300 p-2 rounded-full md:hover:bg-slate-600 md:hover:border-transparent md:hover:shadow-2xl md:hover:shadow-slate-600 md:hover:text-white cursor-pointer z-10 transition-all duration-200 ease-in-out"
             >
               {window.innerWidth > 760 ? "WEB DEVELOPMENT" : "WEB"}
@@ -59,12 +59,12 @@ function About(props) {
             </Link>
           </div>
           <Routes>
-            <Route
+            {/* <Route
               path="/"
               element={
                 <Web setInfo={setInfo} setSkills={setSkills} clr={props.clr} />
               }
-            />
+            /> */}
             <Route
               path="/Portfolio/"
               element={

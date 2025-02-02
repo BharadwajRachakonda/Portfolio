@@ -186,6 +186,23 @@ html {
   animation: widthHr 2s forwards 2ms 1 ease-in-out;
 }
 
+.animate-line-back {
+  animation: widthHrReverse 2s forwards 2ms 1 ease-in-out;
+  position: absolute;
+  right: 0;
+}
+
+@keyframes widthHrReverse {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  100% {
+    width: 100%;
+    right: 0;
+  }
+}
+
 @keyframes widthHr {
   0% {
     width: 0;
