@@ -47,21 +47,21 @@ function ProjectCard(props) {
             <div className="font-bold text-xl mb-2">{title}</div>
             <p className="text-base">{description}</p>
             <br />
-            <ul className="text-white font-bold flex flex-row justify-between gap-10">
+            <div className="text-white font-bold flex flex-row justify-between gap-10">
               <a target="_blank" href={github}>
-                <li className="transition-all rounded-md  duration-150 ease-in-out p-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group hover:-translate-y-1">
+                <div className="transition-all rounded-md  duration-150 ease-in-out p-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group hover:-translate-y-1">
                   <i className="fa-brands fa-github group-hover:animate-bounce"></i>
                   GitHub
-                </li>
+                </div>
               </a>
               {deployed && (
                 <a href={deployed} target="_blank">
-                  <li className="transition-all rounded-md  duration-150 ease-in-out p-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group hover:-translate-y-1">
+                  <div className="transition-all rounded-md  duration-150 ease-in-out p-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group hover:-translate-y-1">
                     Visit Here
-                  </li>
+                  </div>
                 </a>
               )}
-            </ul>
+            </div>
           </div>
           <div className="px-6 pt-4 pb-2">
             <span
