@@ -11,7 +11,7 @@ function Skills(props) {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-30 text-white"
+      className="fixed inset-0 bg-black h-lvh bg-opacity-50 flex justify-center items-center z-30 text-white"
       title={about}
     >
       <div className="card">
