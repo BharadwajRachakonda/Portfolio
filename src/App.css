@@ -50,7 +50,60 @@
 }
 
 .myimage {
-  border-radius: 63% 37% 69% 31% / 47% 59% 41% 53%;
+  /* border-radius: 63% 37% 69% 31% / 47% 59% 41% 53%;
+  animation: moving 3s ease-in-out infinite; */
+  border-radius: 100%;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.myimageParent {
+  position: relative;
+  display: inline-block;
+}
+
+.myimageParent::after,
+.myimageParent::before {
+  content: "";
+  position: absolute;
+  width: 104%;
+  height: 104%;
+  transform: translate(-50%, -50%);
+  background-image: conic-gradient(
+    from var(--angle),
+    #76c1fb,
+    #b388f3,
+    #76c1fb
+  );
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  /* border-radius: 50%;
+  z-index: 100;
+  display: block; */
+}
+
+.myimageParent::before,
+.myimageParent::after {
+  animation: moveBorder 3s linear infinite;
+}
+
+@keyframes moveBorder {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+.myimageParent::after {
+  filter: blur(20px);
   animation: moving 3s ease-in-out infinite;
 }
 
