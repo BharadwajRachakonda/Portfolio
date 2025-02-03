@@ -108,6 +108,20 @@ function AchievementsAndContact(props) {
             </a>
           </li>
         </ul>
+        <p>
+          This WebPage is{" "}
+          <b>
+            <strong>Designed and Developed</strong>
+          </b>{" "}
+          with 💝 by{" "}
+          <b>
+            <strong>Bharadwaj Rachakonda </strong>
+          </b>
+          and You are permitted to take reference but{" "}
+          <b>
+            <strong>please don't Copy Paste.</strong>
+          </b>
+        </p>
       </div>
     </div>
   );
