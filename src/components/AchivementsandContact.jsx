@@ -17,7 +17,7 @@ function AchievementsAndContact(props) {
         crossOrigin="anonymous"
         referrerPolicy="no-referrer"
       />
-      <div className="flex flex-col items-center z-10">
+      <div className="flex flex-col items-center z-10 md:min-w-fit">
         <ul className="md:font-bold justify-around md:m-4 md:border-r-2 border-gray-600 md:pr-3">
           <h2 className="text-lg">
             Achievements
