@@ -15,15 +15,9 @@ export default function App() {
   /* In Development or Not */
   const inDevelopment = /*true;*/ false;
 
-  useEffect(() => {
-    toast.success(`Moving to ${mode} Mode`, {
-      style: {
-        marginTop: "40px",
-        background: mode === "dark" ? "#333" : "#fff",
-        color: mode === "light" ? "#333" : "#fff",
-      },
-    });
-  }, [mode]);
+  // useEffect(() => {
+
+  // }, [mode]);
 
   const darkIcon = (
     <svg
@@ -58,7 +52,16 @@ export default function App() {
   );
 
   const handleClick = () => {
-    setMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
+    const newMode = mode === "dark" ? "light" : "dark";
+    setMode(newMode);
+    toast.dismiss();
+    toast.success(`Moving to ${newMode} Mode`, {
+      style: {
+        marginTop: "40px",
+        background: newMode === "dark" ? "#333" : "#fff",
+        color: newMode === "light" ? "#333" : "#fff",
+      },
+    });
   };
 
   return (
