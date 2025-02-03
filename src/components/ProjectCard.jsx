@@ -30,7 +30,13 @@ function ProjectCard(props) {
     deployed,
   } = props;
   return (
-    <div className="hover:shadow-lg">
+    <div
+      className={`rounded-3xl border-2 backdrop-blur-md transition-all duration-300 ${
+        clr === "dark"
+          ? "hover:shadow-[0_0_40px_3px_rgba(203,213,225,0.8)] border-gray-200 backdrop-brightness-200"
+          : "hover:shadow-[0_0_40px_3px_rgba(103,232,249,0.8)] border-gray-800 backdrop-contrast-200"
+      }`}
+    >
       <motion.div
         initial={{ opacity: 0, rotateY: 30 }}
         whileInView={{ opacity: 1, rotateY: 0 }}
@@ -38,25 +44,43 @@ function ProjectCard(props) {
       >
         <div
           id="scrolly-div"
-          className={`max-w-sm rounded overflow-hidden shadow-lg ${
-            clr === "dark" ? "bg-gray-700" : "bg-gray-200"
-          }`}
+          className={`max-w-sm rounded-3xl overflow-hidden`}
         >
-          <VideoPlayer video={video} />
+          <div className="p-6">
+            <div
+              className={`rounded-2xl overflow-hidden border-2 ${
+                clr === "dark" ? "border-gray-200" : "border-gray-950"
+              }`}
+            >
+              <VideoPlayer video={video} />
+            </div>
+          </div>
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{title}</div>
             <p className="text-base">{description}</p>
             <br />
             <div className="text-white font-bold flex flex-row justify-between gap-10">
               <a target="_blank" href={github}>
-                <div className="transition-all rounded-md  duration-150 ease-in-out p-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group hover:-translate-y-1">
-                  <i className="fa-brands fa-github group-hover:animate-bounce"></i>
+                <div
+                  className={`transition-all rounded-xl  duration-150 ease-in-out p-2 hover:scale-105 hover:tracking-widest group hover:-translate-y-1 border-2 ${
+                    clr === "dark"
+                      ? "border-gray-200"
+                      : "border-gray-700 text-black"
+                  }`}
+                >
+                  <i className="fa-brands fa-github group-hover:animate-bounce mr-2"></i>
                   GitHub
                 </div>
               </a>
               {deployed && (
                 <a href={deployed} target="_blank">
-                  <div className="transition-all rounded-md  duration-150 ease-in-out p-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group hover:-translate-y-1">
+                  <div
+                    className={`transition-all rounded-xl  duration-150 ease-in-out p-2 hover:scale-105 hover:tracking-widest group hover:-translate-y-1 border-2 ${
+                      clr === "dark"
+                        ? "border-gray-200"
+                        : "border-gray-700 text-black"
+                    }`}
+                  >
                     Visit Here
                   </div>
                 </a>

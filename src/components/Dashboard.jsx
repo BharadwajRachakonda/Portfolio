@@ -89,7 +89,13 @@ function Dashboard(props) {
               href="https://BharadwajRachakonda.github.io/Portfolio/Resume.pdf"
               target="_blank"
             >
-              <p className="transition-all rounded-md duration-150 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group text-white">
+              <p
+                className={`transition-all rounded-xl backdrop-blur-md duration-150 ease-in-out p-2 hover:scale-105 hover:tracking-widest group hover:-translate-y-1 border-2 ${
+                  props.clr === "dark"
+                    ? "border-gray-200 backdrop-brightness-200"
+                    : "border-gray-700 text-black backdrop-contrast-200"
+                }`}
+              >
                 Resume
               </p>
             </a>
@@ -97,7 +103,13 @@ function Dashboard(props) {
               href="https://drive.google.com/drive/folders/18TjnxUndk-zkWh3GVeAZL69oRu-cRPwC?usp=sharing"
               target="_blank"
             >
-              <p className="transition-all rounded-md duration-150 ease-in p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group text-white">
+              <p
+                className={`transition-all rounded-xl backdrop-blur-md duration-150 ease-in-out p-2 hover:scale-105 hover:tracking-widest group hover:-translate-y-1 border-2 ${
+                  props.clr === "dark"
+                    ? "border-gray-200 backdrop-brightness-200"
+                    : "border-gray-700 text-black backdrop-contrast-200"
+                }`}
+              >
                 Certificates
               </p>
             </a>
