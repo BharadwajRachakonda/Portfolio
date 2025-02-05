@@ -12,6 +12,20 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
+
+  useEffect(() => {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        setMode(event.matches ? "dark" : "light");
+      });
+    return () =>
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", (event) => {
+          setMode(event.matches ? "dark" : "light");
+        });
+  }, []);
   /* In Development or Not */
   const inDevelopment = /*true;*/ false;
 
