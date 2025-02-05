@@ -10,7 +10,7 @@ function Projects(props) {
   return (
     <div
       id="Projects"
-      className={`z-0 md:h-screen flex justify-center items-center`}
+      className={`z-0 xl:h-screen flex justify-center items-center`}
     >
       <div className="flex flex-col gap-y-14 justify-center items-center z-0 w-full px-4">
         <br />
@@ -28,7 +28,7 @@ function Projects(props) {
             }
           />
         </h1>
-        <div className="flex flex-row gap-4 md:gap-2 flex-wrap md:m-0 h-auto md:w-screen justify-around">
+        <div className="flex flex-row gap-8 xl:gap-2 flex-wrap md:m-0 h-auto md:w-screen justify-around">
           <ProjectCard
             video={News}
             clr={clr}
@@ -38,6 +38,7 @@ function Projects(props) {
             skill2="BootStrap"
             skill3="API"
             github="https://github.com/BharadwajRachakonda/NewsAPI"
+            delay={0}
           />
           <ProjectCard
             video={ToDo}
@@ -49,6 +50,7 @@ function Projects(props) {
             skill3="API"
             github="https://github.com/BharadwajRachakonda/ToDo-on-Cloud"
             deployed="https://bharadwajrachakonda.github.io/todo-frontend/"
+            delay={1}
           />
           <ProjectCard
             video={Supragna}
@@ -60,6 +62,7 @@ function Projects(props) {
             skill3="JS"
             github="https://github.com/BharadwajRachakonda/Supragna"
             deployed="https://bharadwajrachakonda.github.io/Supragna/"
+            delay={2}
           />
         </div>
       </div>

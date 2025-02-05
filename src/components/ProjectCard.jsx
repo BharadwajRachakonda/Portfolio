@@ -31,16 +31,21 @@ function ProjectCard(props) {
   } = props;
   return (
     <div
-      className={`rounded-3xl border-2 backdrop-blur-md transition-all duration-300 ${
+      className={`rounded-3xl border-2 backdrop-blur-md transition-all duration-300 overflow-hidden ${
         clr === "dark"
           ? "hover:shadow-[0_0_40px_3px_rgba(203,213,225,0.8)] border-gray-200 backdrop-brightness-200"
           : "hover:shadow-[0_0_40px_3px_rgba(103,232,249,0.8)] border-gray-800 backdrop-contrast-200"
       }`}
+      style={{
+        transformStyle: "preserve-3d",
+        perspectiveOrigin: "top",
+        perspective: 1000,
+      }}
     >
       <motion.div
-        initial={{ opacity: 0, rotateY: 30 }}
-        whileInView={{ opacity: 1, rotateY: 0 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0, rotateX: 30 }}
+        whileInView={{ opacity: 1, rotateX: 0 }}
+        transition={{ duration: 0.5, delay: props.delay * 0.1 }}
       >
         <div
           id="scrolly-div"

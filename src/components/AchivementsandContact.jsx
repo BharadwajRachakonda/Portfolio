@@ -1,15 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-/*
-  AcheivementsandContact takes props
-
-  color(clr)
-  
-*/
 
 function AchievementsAndContact(props) {
+  const isLightMode = props.clr === "light";
+
   return (
-    <div className="w-full md:flex flex-row items-center bg-slate-800 text-white rounded-t-3xl md:p-0 p-10 mt-5">
+    <div
+      className={`w-full md:flex flex-row items-center rounded-t-3xl md:p-0 p-10 mt-5 text-xs md:text-base transition-all duration-300 ${
+        isLightMode
+          ? "bg-white text-black border-t-2 border-zinc-300"
+          : "bg-slate-800 text-white border-t-2 border-gray-600"
+      }`}
+    >
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -18,7 +20,11 @@ function AchievementsAndContact(props) {
         referrerPolicy="no-referrer"
       />
       <div className="flex flex-col items-center z-10 md:min-w-fit">
-        <ul className="md:font-bold justify-around md:m-4 md:border-r-2 border-gray-600 md:pr-3">
+        <ul
+          className={`md:font-bold justify-around md:m-4 md:border-r-2 md:pr-3 ${
+            isLightMode ? "border-gray-400" : "border-gray-600"
+          }`}
+        >
           <h2 className="text-lg">
             Achievements
             <motion.hr
@@ -26,33 +32,31 @@ function AchievementsAndContact(props) {
               whileInView={{ width: 144 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className={
-                `hidden md:block w-36 border-t-2 border-dashed ` +
-                (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
-              }
+              className={`hidden md:block w-36 border-t-2 border-dashed ${
+                isLightMode ? "border-gray-400" : "border-gray-600"
+              }`}
             />
           </h2>
           <br />
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> 5 star
-            coder in HackerRank (Python, CPP, Java)
+            coder in HackerRank
           </li>
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> Solved
             over 200+ problems on Leetcode
           </li>
           <li>
-            <i className="fa-regular fa-circle-check scale-110 p-3"></i>{" "}
-            Certified for Foundations of R Software (Top 2%) through NPTEL
+            <i className="fa-regular fa-circle-check scale-110 p-3"></i> Top 2%
+            in Foundations of R Software Certification.
           </li>
           <li>
-            <i className="fa-regular fa-circle-check scale-110 p-3"></i>{" "}
-            Certified for Modern C++ (Missed Top 5% by just 1% overall score)
-            through NPTEL
+            <i className="fa-regular fa-circle-check scale-110 p-3"></i> Top 6%
+            in Modern C++ Certification.
           </li>
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> 48.3
-            wpm typing speed (RataType)
+            wpm typing speed
           </li>
         </ul>
       </div>
@@ -65,61 +69,84 @@ function AchievementsAndContact(props) {
             whileInView={{ width: 80 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className={
-              `hidden md:block w-20 border-t-2 border-dashed ` +
-              (props.clr == `light` ? `border-gray-600` : `border-gray-400`)
-            }
+            className={`hidden md:block w-20 border-t-2 border-dashed ${
+              isLightMode ? "border-gray-400" : "border-gray-600"
+            }`}
           />
         </h2>
         <br />
-        <ul className="md:font-bold flex flex-row md:m-4 md:justify-between md:gap-10 flex-wrap gap-5 justify-around">
-          <li className="transition-all rounded-md  duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
-            <i className="fa-brands fa-linkedin group-hover:animate-bounce"></i>
+        <ul className="md:font-bold m-0 py-5 flex items-center md:m-4 md:justify-between md:gap-10 flex-wrap gap-5 justify-around max-w-2xl">
+          <li>
             <a
               target="_blank"
               href="https://www.linkedin.com/in/bharadwaj-rachakonda-b36658258/"
             >
-              {" "}
-              Linkedin
+              <div
+                className={`max-w-40 transition-all rounded-xl flex justify-center items-center gap-1 md:gap-2 duration-150 ease-in-out p-2 md:w-auto w-full border-2 hover:scale-105 hover:tracking-widest group ${
+                  props.clr === "light" ? "border-black" : "border-white"
+                }`}
+              >
+                <i className="fa-brands fa-linkedin group-hover:animate-bounce"></i>
+                Linkedin
+              </div>
             </a>
           </li>
-          <li className="transition-all rounded-md  duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
-            <i className="fa-solid fa-laptop-code group-hover:animate-bounce"></i>
+          <li>
             <a target="_blank" href="https://leetcode.com/BharadwajRachakonda/">
-              {" "}
-              LeetCode
+              <div
+                className={`max-w-40 transition-all rounded-xl flex justify-center items-center gap-1 md:gap-2 duration-150 ease-in-out p-2 md:w-auto w-full border-2 hover:scale-105 hover:tracking-widest group ${
+                  props.clr === "light" ? "border-black" : "border-white"
+                }`}
+              >
+                <i className="fa-solid fa-laptop-code group-hover:animate-bounce"></i>
+                LeetCode
+              </div>
             </a>
           </li>
-          <li className="transition-all rounded-md  duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
-            <i className="fa-brands fa-hackerrank group-hover:animate-bounce"></i>
+          <li>
             <a
               target="_blank"
               href="https://www.hackerrank.com/profile/rbharadwaj022"
             >
-              {" "}
-              HackerRank
+              <div
+                className={`max-w-40 transition-all rounded-xl flex justify-center items-center gap-1 md:gap-2 duration-150 ease-in-out p-2 md:w-auto w-full border-2 hover:scale-105 hover:tracking-widest group ${
+                  props.clr === "light" ? "border-black" : "border-white"
+                }`}
+              >
+                <i className="fa-brands fa-hackerrank group-hover:animate-bounce"></i>
+                HackerRank
+              </div>
             </a>
           </li>
-          <li className="transition-all rounded-md  duration-150 ease-in-out p-2 md:w-auto w-full flex justify-center items-center gap-2 bg-neutral-500 hover:scale-105 hover:tracking-widest group">
-            <i className="fa-brands fa-github group-hover:animate-bounce"></i>
+          <li>
             <a target="_blank" href="https://github.com/BharadwajRachakonda">
-              {" "}
-              GitHub
+              <div
+                className={`max-w-40 transition-all rounded-xl flex justify-center items-center gap-1 md:gap-2 duration-150 ease-in-out p-2 md:w-auto w-full border-2 hover:scale-105 hover:tracking-widest group ${
+                  props.clr === "light" ? "border-black" : "border-white"
+                }`}
+              >
+                <i className="fa-brands fa-github group-hover:animate-bounce"></i>
+                GitHub
+              </div>
             </a>
           </li>
         </ul>
-        <p>
+        <p
+          className={`transition-all duration-300 ${
+            isLightMode ? "text-white contrast-50" : "text-gray-400"
+          }`}
+        >
           This WebPage is{" "}
           <b>
             <strong>Designed and Developed</strong>
           </b>{" "}
-          with 💝 by{" "}
+          with 💝 by
           <b>
-            <strong>Bharadwaj Rachakonda </strong>
-          </b>
-          and You are permitted to take reference but{" "}
+            <strong> Bharadwaj Rachakonda </strong>
+          </b>{" "}
+          and You are permitted to take reference but
           <b>
-            <strong>please don't Copy Paste.</strong>
+            <strong> please don't Copy Paste.</strong>
           </b>
         </p>
       </div>
