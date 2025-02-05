@@ -11,7 +11,7 @@ import React from "react";
 const VideoPlayer = (props) => {
   return (
     <div>
-      <video autoPlay loop muted poster="poster.jpg" className="w-full">
+      <video autoPlay loop muted className="w-full">
         <source src={props.video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
