@@ -62,7 +62,7 @@ function BgAnimation(props) {
               surfaceScale="6"
               specularConstant="0.4"
               specularExponent="20"
-              lightingColor={props.clr == "dark" ? `#ffffff` : `#00d0fc`} // White grain for dark mode
+              lightingColor={props.clr == "dark" ? `#e5e5e5` : `#00d0fc`} // White grain for dark mode
               in="turbulence"
               result="specularLighting"
             >
