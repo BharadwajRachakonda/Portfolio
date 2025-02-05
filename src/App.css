@@ -28,10 +28,10 @@
   }
 }
 
-::selection {
+/* ::selection {
   background: #7a5eec;
   color: white;
-}
+} */
 
 .newcursor,
 .newcursor2,

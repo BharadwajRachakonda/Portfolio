@@ -65,7 +65,13 @@ export default function App() {
   };
 
   return (
-    <>
+    <div
+      className={`${
+        mode === "dark"
+          ? "selection:bg-[#7a5eec] selection:text-white"
+          : "selection:bg-sky-900 selection:text-white"
+      }`}
+    >
       <meta
         name="theme-color"
         content={mode === "dark" ? "#14255c" : "#e1e8fd"}
@@ -111,6 +117,6 @@ export default function App() {
           </SkillState>
         </div>
       </div>
-    </>
+    </div>
   );
 }
