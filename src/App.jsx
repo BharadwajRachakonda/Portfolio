@@ -14,17 +14,22 @@ export default function App() {
   const [mode, setMode] = useState("dark");
 
   useEffect(() => {
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (event) => {
-        setMode(event.matches ? "dark" : "light");
-      });
-    return () =>
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .removeEventListener("change", (event) => {
-          setMode(event.matches ? "dark" : "light");
-        });
+    const initialMode = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
+    setMode(initialMode);
+
+    const handleChange = (event) => {
+      setMode(event.matches ? "dark" : "light");
+    };
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
   }, []);
   /* In Development or Not */
   const inDevelopment = /*true;*/ false;
