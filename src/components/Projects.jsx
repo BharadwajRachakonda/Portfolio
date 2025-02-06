@@ -28,7 +28,7 @@ function Projects(props) {
             }
           />
         </h1>
-        <div className="flex flex-row gap-8 xl:gap-2 flex-wrap md:m-0 h-auto md:w-screen justify-around">
+        <div className="flex flex-row gap-8 xl:gap-2 m-8 flex-wrap md:m-0 h-auto md:w-screen justify-around">
           <ProjectCard
             video={News}
             clr={clr}

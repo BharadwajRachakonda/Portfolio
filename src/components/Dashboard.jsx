@@ -115,7 +115,7 @@ function Dashboard(props) {
             </a>
           </div>
         )}
-        <p className="text-justify md:w-[50vw] mx-5 md:m-0">
+        <p className="text-justify text-sm md:text-base md:w-[50vw] mx-5 md:m-0 hyphens-auto leading-7">
           I am Bharadwaj Rachakonda, a B.Tech student specializing in Artificial
           Intelligence and Machine Learning at Velagapudi Ramakrishna Siddhartha
           Engineering College. With a passion for innovation, I combine

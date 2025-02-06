@@ -51,7 +51,7 @@ function ProjectCard(props) {
           id="scrolly-div"
           className={`max-w-sm rounded-3xl overflow-hidden`}
         >
-          <div className="p-6">
+          <div className="p-4 md:p-6">
             <div
               className={`rounded-2xl overflow-hidden border-2 ${
                 clr === "dark" ? "border-gray-200" : "border-gray-950"
@@ -61,13 +61,13 @@ function ProjectCard(props) {
             </div>
           </div>
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{title}</div>
-            <p className="text-base">{description}</p>
+            <div className="font-bold text-base md:text-xl mb-2">{title}</div>
+            <p className="text-sm md:text-base">{description}</p>
             <br />
             <div className="text-white font-bold flex flex-row justify-between gap-10">
               <a target="_blank" href={github}>
                 <div
-                  className={`transition-all rounded-xl  duration-150 ease-in-out p-2 hover:scale-105 hover:tracking-widest group hover:-translate-y-1 border-2 ${
+                  className={`transition-all rounded-xl text-sm md:text-base duration-150 ease-in-out p-2 hover:scale-105 hover:tracking-widest group hover:-translate-y-1 border-2 ${
                     clr === "dark"
                       ? "border-gray-200"
                       : "border-gray-700 text-black"
@@ -80,7 +80,7 @@ function ProjectCard(props) {
               {deployed && (
                 <a href={deployed} target="_blank">
                   <div
-                    className={`transition-all rounded-xl  duration-150 ease-in-out p-2 hover:scale-105 hover:tracking-widest group hover:-translate-y-1 border-2 ${
+                    className={`transition-all rounded-xl text-sm md:text-base duration-150 ease-in-out p-2 hover:scale-105 hover:tracking-widest group hover:-translate-y-1 border-2 ${
                       clr === "dark"
                         ? "border-gray-200"
                         : "border-gray-700 text-black"

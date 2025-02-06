@@ -48,7 +48,7 @@ function AchievementsAndContact(props) {
           </li>
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> Top 2%
-            in Foundations of R Software Certification.
+            in Foundations of R Software.
           </li>
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> Top 6%
