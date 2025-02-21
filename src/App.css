@@ -141,6 +141,35 @@ html {
 
 :root {
   --card-color: rgb(25, 25, 25);
+  --gradient: linear-gradient(
+    -45deg,
+    transparent 5%,
+    rgb(126, 248, 218) 50%,
+    transparent 99%
+  );
+  --shadow: rgb(126, 248, 218);
+}
+
+[data-clr="dark"] {
+  --card-color: rgb(25, 25, 25);
+  --gradient: linear-gradient(
+    -45deg,
+    transparent 5%,
+    rgb(126, 248, 218) 50%,
+    transparent 99%
+  );
+  --shadow: rgb(126, 248, 218);
+}
+
+[data-clr="light"] {
+  --card-color: rgb(240, 240, 240);
+  --gradient: linear-gradient(
+    -45deg,
+    transparent 5%,
+    rgb(0, 69, 126) 50%,
+    transparent 99%
+  );
+  --shadow: rgb(0, 69, 126);
 }
 
 .card {
@@ -156,18 +185,13 @@ html {
   background-color: var(--card-color);
   border-radius: inherit;
   display: grid;
-  inset: 1px;
+  inset: 0.5px;
   padding: 1em;
   position: absolute;
 }
 
 .card:before {
-  background: linear-gradient(
-    -45deg,
-    transparent 5%,
-    rgb(126, 248, 218) 50%,
-    transparent 99%
-  );
+  background: var(--gradient);
   border-radius: inherit;
   content: "";
   inset: -0.1px;
@@ -179,7 +203,7 @@ html {
 }
 
 .shadow-card-skills {
-  box-shadow: 0px 18px 182.5px -60px rgb(126, 248, 218);
+  box-shadow: 0px 18px 182.5px -60px var(--shadow);
 }
 
 .animate-line {

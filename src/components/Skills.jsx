@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import skillContext from "../context/skills/skillContext";
+import { motion } from "framer-motion";
 
 function Skills(props) {
   const { percentage, used_for, skill, image, about } = props;
@@ -10,12 +11,43 @@ function Skills(props) {
   };
 
   return (
-    <div
-      className="fixed inset-0 bg-black h-lvh bg-opacity-50 flex justify-center items-center z-30 text-white"
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { duration: 0.2 },
+      }}
+      exit={{ opacity: 0 }}
+      className={`fixed inset-0 bg-black h-lvh bg-opacity-50 flex justify-center items-center z-30 ${
+        props.clr == "dark" ? "text-white" : "text-black"
+      }`}
       title={about}
     >
-      <div className="card">
-        <div
+      {/* Inset controles border and card position in card */}
+      <motion.div
+        initial={{ opacity: 0, overflow: "hidden", width: "0", height: "0" }}
+        data-clr={props.clr}
+        animate={{
+          opacity: 1,
+          width: "21rem",
+          height: "25rem",
+          overflow: "auto",
+        }}
+        transition={{ duration: 0.2 }}
+        exit={{ opacity: 0 }}
+        className="card"
+      >
+        <motion.div
+          data-clr={props.clr}
+          initial={{ opacity: 0, overflow: "hidden", width: "0", height: "0" }}
+          animate={{
+            opacity: 1,
+            width: "20rem",
+            height: "24rem",
+            overflow: "auto",
+          }}
+          transition={{ duration: 0.2 }}
+          exit={{ opacity: 0 }}
           className={
             `card-content z-30 h-96 w-80 ` +
             ` rounded-[46px] shadow-card-skills backdrop-blur-[157.30px] flex items-center justify-center relative flex-col gap-10`
@@ -25,7 +57,7 @@ function Skills(props) {
             <img src={image} alt={skill} />
             <p className="text-2xl font-semibold">{skill}</p>
           </div>
-          <div className="flex justify-center items-center flex-col gap-9 bg-sky-900 p-3 rounded-xl">
+          <div className="flex justify-center items-center flex-col gap-9 bg-sky-900 text-white p-3 rounded-xl">
             <div className="flex justify-center items-center gap-3">
               <p>Level:</p>
               <span className="h-4 w-40 bg-white flex items-center rounded-lg">
@@ -60,9 +92,9 @@ function Skills(props) {
               Close
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }
 
