@@ -4,6 +4,7 @@ import skillContext from "../context/skills/skillContext";
 import { Route, Routes, Link } from "react-router-dom";
 import Web from "./Web";
 import Programming from "./Programming";
+import Tools from "./Tools";
 import { motion } from "framer-motion";
 
 function About(props) {
@@ -49,13 +50,19 @@ function About(props) {
               to="/Portfolio/"
               className="border-2 border-x-gray-300 p-2 text-sm md:text-base rounded-full md:hover:bg-slate-600 md:hover:border-transparent md:hover:shadow-2xl md:hover:shadow-slate-600 md:hover:text-white cursor-pointer z-10 transition-all duration-200 ease-in-out"
             >
-              {window.innerWidth > 760 ? "WEB DEVELOPMENT" : "WEB"}
+              {window.innerWidth > 760 ? "WEB DEVELOPMENT" : "Web"}
             </Link>
             <Link
               to="/Portfolio/Programming"
               className="border-2 border-x-gray-300 p-2 text-sm md:text-base rounded-full md:hover:bg-slate-600 md:hover:border-transparent md:hover:shadow-2xl md:hover:shadow-slate-600 md:hover:text-white cursor-pointer z-10 transition-all duration-200 ease-in-out"
             >
               {window.innerWidth > 760 ? "PROGRAMMING LANGUAGES" : "Prog"}
+            </Link>
+            <Link
+              to="/Portfolio/Tools"
+              className="border-2 border-x-gray-300 p-2 text-sm md:text-base rounded-full md:hover:bg-slate-600 md:hover:border-transparent md:hover:shadow-2xl md:hover:shadow-slate-600 md:hover:text-white cursor-pointer z-10 transition-all duration-200 ease-in-out"
+            >
+              {window.innerWidth > 760 ? "TOOLS" : "Tools"}
             </Link>
           </div>
           <Routes>
@@ -75,6 +82,16 @@ function About(props) {
               path="/Portfolio/Programming"
               element={
                 <Programming
+                  setInfo={setInfo}
+                  setSkills={setSkills}
+                  clr={props.clr}
+                />
+              }
+            />
+            <Route
+              path="/Portfolio/Tools"
+              element={
+                <Tools
                   setInfo={setInfo}
                   setSkills={setSkills}
                   clr={props.clr}

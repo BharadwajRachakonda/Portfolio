@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import cpp from "./cpp.png";
 import python from "./python.png";
 import java from "./java.png";
+import javaScript from "./javascript.png";
 
 const skills = [
   {
@@ -17,7 +18,7 @@ const skills = [
   },
   {
     name: "CPP",
-    percentage: 60,
+    percentage: 80,
     used_for: "DSA + IoT for EPICS",
     image: cpp,
     about:
@@ -33,6 +34,16 @@ const skills = [
     about:
       "Java is a programming language that is both interpreted and compiled. It is mostly used for web development using Servlets, JSP, Spring, and Spring Boot.",
     color: "cyan",
+    align: "self-end",
+  },
+  {
+    name: "JavaScript",
+    percentage: 70,
+    used_for: "Web Development",
+    image: javaScript,
+    about:
+      "JavaScript is a versatile programming language primarily used for web development. It enables interactive web pages and is an essential part of web applications.",
+    color: "orange",
     align: "self-start",
   },
 ];

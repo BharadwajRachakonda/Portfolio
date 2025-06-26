@@ -4,30 +4,38 @@ import css from "./css.png";
 import tailwind from "./tailwind.png";
 import html from "./html.png";
 import re from "./react.png";
-import figma from "./Figma.png";
 import node from "./node.png";
 import mongodb from "./mongodb.png";
 import express from "./express.png";
+import sql from "./sql.png";
+import flask from "./flask.png";
+import nextjs from "./nextjs.png";
+
+/*
+percentage should be out of these values
+  60, 70, 75, 80, 90, 100
+*/
 
 const skills = [
-  {
-    skill: "HTML",
-    image: html,
-    used_for: "NewsAPP + ToDo on Cloud",
-    about: "HTML is a markup language...",
-    classDark:
-      "shadow-orange-600 hover:shadow-orange-600 bg-gray-700 self-start",
-    classLight:
-      "shadow-orange-400 hover:shadow-orange-400 bg-gray-200 self-start",
-  },
   {
     skill: "CSS",
     image: css,
     used_for: "NewsAPP + ToDo on Cloud",
     about: "Cascading style sheets...",
-    classDark: "shadow-blue-600 hover:shadow-blue-600 bg-gray-700 self-end",
-    classLight: "shadow-blue-400 hover:shadow-blue-400 bg-gray-200 self-end",
+    classDark: "shadow-blue-600 hover:shadow-blue-600 bg-gray-700 self-start",
+    classLight: "shadow-blue-400 hover:shadow-blue-400 bg-gray-200 self-start",
+    percentage: 80,
   },
+  {
+    skill: "React",
+    image: re,
+    used_for: "NewsAPP + ToDo on Cloud + Portfolio",
+    about: "React is a JS library...",
+    classDark: "shadow-cyan-600 hover:shadow-cyan-600 bg-gray-700 self-end",
+    classLight: "shadow-cyan-400 hover:shadow-cyan-400 bg-gray-200 self-end",
+    percentage: 80,
+  },
+
   {
     skill: "Tailwind",
     image: tailwind,
@@ -35,24 +43,51 @@ const skills = [
     about: "Tailwind is an extension...",
     classDark: "shadow-sky-600 hover:shadow-sky-600 bg-gray-700 self-start",
     classLight: "shadow-sky-400 hover:shadow-sky-400 bg-gray-200 self-start",
+    percentage: 80,
   },
   {
-    skill: "React",
-    image: re,
-    used_for: "NewsAPP + ToDo on Cloud + Portfolio",
-    about: "React is a JS library...",
-    classDark: "shadow-cyan-600 hover:shadow-cyan-600 bg-gray-700 self-center",
-    classLight: "shadow-cyan-400 hover:shadow-cyan-400 bg-gray-200 self-center",
-  },
-  {
-    skill: "Figma",
-    image: figma,
-    used_for: "Design + Prototyping",
-    about: "Figma is a UI tool...",
-    classDark:
-      "shadow-green-600 hover:shadow-green-600 bg-gray-700 self-center",
+    skill: "Next.js",
+    image: nextjs,
+    used_for: "Portfolio",
+    about:
+      "Next.js is a React framework for server-side rendering and static site generation.",
+    classDark: "shadow-black hover:shadow-black bg-gray-700 self-center",
     classLight:
-      "shadow-green-400 hover:shadow-green-400 bg-gray-200 self-center",
+      "shadow-neutral-400 hover:shadow-neutral-400 bg-gray-200 self-center",
+    percentage: 60,
+  },
+  {
+    skill: "Express",
+    image: express,
+    used_for: "ToDo on Cloud",
+    about: "Express is a framework on Node.JS...",
+    classDark: "shadow-black hover:shadow-black bg-gray-700 self-end",
+    classLight:
+      "shadow-neutral-400 hover:shadow-neutral-400 bg-gray-200 self-end",
+    percentage: 80,
+  },
+  {
+    skill: "Flask",
+    image: flask,
+    used_for: "Backend APIs",
+    about:
+      "Flask is a lightweight Python web framework for building APIs and web applications.",
+    classDark: "shadow-black hover:shadow-black bg-gray-700 self-end",
+    classLight:
+      "shadow-neutral-400 hover:shadow-neutral-400 bg-gray-200 self-end",
+    percentage: 60,
+  },
+
+  {
+    skill: "SQL",
+    image: sql,
+    used_for: "Database Management",
+    about:
+      "SQL is a standard language for accessing and manipulating databases.",
+    classDark: "shadow-black hover:shadow-black bg-gray-700 self-center",
+    classLight:
+      "shadow-neutral-400 hover:shadow-neutral-400 bg-gray-200 self-center",
+    percentage: 80,
   },
   {
     skill: "NodeJS",
@@ -62,6 +97,7 @@ const skills = [
     classDark: "shadow-green-600 hover:shadow-green-600 bg-gray-700 self-start",
     classLight:
       "shadow-green-400 hover:shadow-green-400 bg-gray-200 self-start",
+    percentage: 80,
   },
   {
     skill: "MongoDB",
@@ -70,16 +106,18 @@ const skills = [
     about: "MongoDB is a No-SQL database...",
     classDark: "shadow-green-600 hover:shadow-green-600 bg-gray-700 self-end",
     classLight: "shadow-green-400 hover:shadow-green-400 bg-gray-200 self-end",
+    percentage: 80,
   },
   {
-    skill: "Express",
-    image: express,
-    used_for: "ToDo on Cloud",
-    about: "Express is a framework on Node.JS...",
+    skill: "HTML",
+    image: html,
+    used_for: "NewsAPP + ToDo on Cloud",
+    about: "HTML is a markup language...",
     classDark:
-      "shadow-neutral-200 hover:shadow-neutral-200 bg-gray-700 self-start",
+      "shadow-orange-600 hover:shadow-orange-600 bg-gray-700 self-start",
     classLight:
-      "shadow-neutral-600 hover:shadow-neutral-600 bg-gray-200 self-start",
+      "shadow-orange-400 hover:shadow-orange-400 bg-gray-200 self-start",
+    percentage: 90,
   },
 ];
 
@@ -103,7 +141,7 @@ function Web(props) {
               className="flex flex-col justify-center items-center"
               onClick={() => {
                 setInfo({
-                  percentage: 80,
+                  percentage: item.percentage,
                   used_for: item.used_for,
                   skill: item.skill,
                   image: item.image,
