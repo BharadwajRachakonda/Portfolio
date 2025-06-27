@@ -11,6 +11,7 @@ function AchievementsAndContact(props) {
           ? "bg-white text-black border-t-2 border-zinc-300"
           : "bg-slate-800 text-white border-t-2 border-gray-600"
       }`}
+      id="Achievements"
     >
       <link
         rel="stylesheet"
@@ -39,12 +40,20 @@ function AchievementsAndContact(props) {
           </h2>
           <br />
           <li>
+            <i className="fa-regular fa-circle-check scale-110 p-3"></i> Solved
+            Highest Leetcode Contest Rating 1794
+          </li>
+          <li>
+            <i className="fa-regular fa-circle-check scale-110 p-3"></i> Solved
+            contest rank 659 / 30797 in Leetcode biweekly 152
+          </li>
+          <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> 5 star
             coder in HackerRank
           </li>
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> Solved
-            over 200+ problems on Leetcode
+            over 600+ problems on Leetcode
           </li>
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> Top 2%

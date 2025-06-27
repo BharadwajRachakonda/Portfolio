@@ -104,6 +104,26 @@ function Navbar(props) {
                   Projects
                 </a>
                 <a
+                  href="#Certifications"
+                  className={`hover:bg-gray-700 rounded-md px-3 py-2 text-sm hover:text-white ${
+                    location.hash === "#Certifications"
+                      ? "bg-gray-900 text-white"
+                      : ""
+                  }`}
+                >
+                  Certifications
+                </a>
+                <a
+                  href="#Achievements"
+                  className={`hover:bg-gray-700 rounded-md px-3 py-2 text-sm hover:text-white ${
+                    location.hash === "#Achievements"
+                      ? "bg-gray-900 text-white"
+                      : ""
+                  }`}
+                >
+                  Achievements
+                </a>
+                <a
                   href="mailto:rbharadwaj022@gmail.com"
                   className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 text-sm hover:bg-indigo-500 duration-300 p-2 rounded-md text-white"
                 >
@@ -165,6 +185,26 @@ function Navbar(props) {
             }`}
           >
             Projects
+          </a>
+          <a
+            href="#Certifications"
+            className={`block rounded-md px-3 py-2 text-base ${
+              location.hash === "#Certifications"
+                ? "bg-gray-900 text-white"
+                : "hover:bg-gray-700 hover:text-white"
+            }`}
+          >
+            Certifications
+          </a>
+          <a
+            href="#Achievements"
+            className={`block rounded-md px-3 py-2 text-base ${
+              location.hash === "#Achievements"
+                ? "bg-gray-900 text-white"
+                : "hover:bg-gray-700 hover:text-white"
+            }`}
+          >
+            Achievements
           </a>
           <a
             href="mailto:rbharadwaj022@gmail.com"

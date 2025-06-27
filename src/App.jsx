@@ -9,6 +9,7 @@ import AchievementsAndContact from "./components/AchivementsandContact";
 import { useState, useEffect } from "react";
 import SkillState from "./context/skills/skillState";
 import toast, { Toaster } from "react-hot-toast";
+import Certifications from "./components/Certifications";
 
 export default function App() {
   const [mode, setMode] = useState("dark");
@@ -132,6 +133,7 @@ export default function App() {
             <Dashboard clr={mode} />
             <About clr={mode} />
             <Projects clr={mode} />
+            <Certifications clr={mode} />
             <AchievementsAndContact clr={mode} />
           </SkillState>
         </div>
