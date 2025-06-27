@@ -40,12 +40,12 @@ function AchievementsAndContact(props) {
           </h2>
           <br />
           <li>
-            <i className="fa-regular fa-circle-check scale-110 p-3"></i> Solved
+            <i className="fa-regular fa-circle-check scale-110 p-3"></i>
             Highest Leetcode Contest Rating 1794
           </li>
           <li>
-            <i className="fa-regular fa-circle-check scale-110 p-3"></i> Solved
-            contest rank 659 / 30797 in Leetcode biweekly 152
+            <i className="fa-regular fa-circle-check scale-110 p-3"></i>
+            Contest rank 659 / 30797 in Leetcode biweekly 152
           </li>
           <li>
             <i className="fa-regular fa-circle-check scale-110 p-3"></i> 5 star
