@@ -29,8 +29,8 @@ function Projects(props) {
           <ProjectCard
             video={Type}
             clr={clr}
-            title="ToDo on Cloud"
-            description="A MERN to-do app with cloud storage via MongoDB Atlas & Mongoose. Features JWT authentication, bcrypt-based encryption, and secure API endpoints tested using Postman."
+            title="Type Together"
+            description="Type Together is a real-time multiplayer typing race app built with Next.js, Socket.io, and Tailwind CSS. It syncs two players typing the same text live, tracks speed and accuracy, and delivers smooth animations using Framer Motion. Designed to make competitive typing fun and interactive."
             skill1="Next.js"
             skill2="Tailwind"
             skill3="Socket.io"
