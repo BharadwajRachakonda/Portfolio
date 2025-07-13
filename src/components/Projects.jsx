@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import News from "./NewsAPIProj1.mp4";
 import ToDo from "./ToDoProj2.mp4";
-import Supragna from "./SupragnaProj3.mp4";
+import Type from "./Type & Compete.mp4";
 import { motion } from "framer-motion";
 
 function Projects(props) {
@@ -27,6 +27,17 @@ function Projects(props) {
         </h1>
         <div className="flex flex-col gap-8 xl:gap-2 m-8 flex-wrap md:m-0 md:w-screen justify-center items-center">
           <ProjectCard
+            video={Type}
+            clr={clr}
+            title="ToDo on Cloud"
+            description="A MERN to-do app with cloud storage via MongoDB Atlas & Mongoose. Features JWT authentication, bcrypt-based encryption, and secure API endpoints tested using Postman."
+            skill1="Next.js"
+            skill2="Tailwind"
+            skill3="Socket.io"
+            github="https://github.com/BharadwajRachakonda/type-together-backend"
+            deployed="https://type-together-five.vercel.app/"
+          />
+          <ProjectCard
             video={ToDo}
             clr={clr}
             title="ToDo on Cloud"
@@ -46,17 +57,6 @@ function Projects(props) {
             skill2="BootStrap"
             skill3="API"
             github="https://github.com/BharadwajRachakonda/NewsAPI"
-          />
-          <ProjectCard
-            video={Supragna}
-            clr={clr}
-            title="Supragna"
-            description="Built Supragna fest website using HTML, CSS & JS in 2–3 days. Used templates & AI tools to convert organizers’ sketches into a responsive, user-friendly, and visually structured interface."
-            skill1="HTML"
-            skill2="CSS"
-            skill3="JS"
-            github="https://github.com/BharadwajRachakonda/Supragna"
-            deployed="https://bharadwajrachakonda.github.io/Supragna/"
           />
         </div>
       </div>
