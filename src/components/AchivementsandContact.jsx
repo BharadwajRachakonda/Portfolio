@@ -88,7 +88,7 @@ function AchievementsAndContact(props) {
           <li>
             <a
               target="_blank"
-              href="https://www.linkedin.com/in/bharadwaj-rachakonda-b36658258/"
+              href="https://www.linkedin.com/in/bharadwajrachakonda/"
             >
               <div
                 className={`max-w-40 transition-all rounded-xl flex justify-center items-center gap-1 md:gap-2 duration-150 ease-in-out p-2 md:w-auto w-full border-2 hover:scale-105 hover:tracking-widest group ${
