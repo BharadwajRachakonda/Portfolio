@@ -9,40 +9,42 @@ const skills = [
   {
     name: "Python",
     percentage: 80,
-    used_for: "DSA + LeetCode",
+    used_for:
+      "I am not a fan of ML, but I use Python for everything, whether web dev using Flask or DSA practice. I do a bit of basic ML in Python as well. Learned it during College",
     image: python,
     about:
-      "Python is a scripting language commonly used for machine learning, deep learning, data science, backend with Flask/Django.",
+      "Python is commonly used for machine learning, backend with Flask/Django.",
     color: "orange",
     align: "self-start",
   },
   {
     name: "CPP",
     percentage: 80,
-    used_for: "DSA + IoT for EPICS",
+    used_for:
+      "In my journey of problem-solving I understood that someday company's might not allow Python. So I learned C++ too through NPTEL.",
     image: cpp,
-    about:
-      "C++ is a programming language commonly used for game development and IoT. C++ and Java are highly used to improve problem-solving skills.",
+    about: "C++ is commonly used for game development and IoT.",
     color: "sky",
     align: "self-end",
   },
   {
     name: "Java",
     percentage: 60,
-    used_for: "Web Development",
+    used_for:
+      "Java was a part of my curriculum in college. I learned it because our professor was good at teaching it, and Java is a standard for many company's.",
     image: java,
     about:
-      "Java is a programming language that is both interpreted and compiled. It is mostly used for web development using Servlets, JSP, Spring, and Spring Boot.",
+      "Java is both interpreted and compiled. It is mostly used for web development.",
     color: "cyan",
     align: "self-end",
   },
   {
     name: "JavaScript",
     percentage: 70,
-    used_for: "Web Development",
+    used_for:
+      "I learned JS from YouTube, but I explored more during my projects.",
     image: javaScript,
-    about:
-      "JavaScript is a versatile programming language primarily used for web development. It enables interactive web pages and is an essential part of web applications.",
+    about: "JavaScript is used for web development...",
     color: "orange",
     align: "self-start",
   },

@@ -30,7 +30,7 @@ function Skills(props) {
         animate={{
           opacity: 1,
           width: "21rem",
-          height: "25rem",
+          height: "29rem",
           overflow: "auto",
         }}
         transition={{ duration: 0.2 }}
@@ -43,7 +43,7 @@ function Skills(props) {
           animate={{
             opacity: 1,
             width: "20rem",
-            height: "24rem",
+            height: "28rem",
             overflow: "auto",
           }}
           transition={{ duration: 0.2 }}
@@ -82,8 +82,10 @@ function Skills(props) {
             </div>
             {used_for && (
               <div className="flex justify-center items-center gap-2 flex-col">
-                <p>Used For: </p>
-                <p className="text-center">{used_for}</p>
+                <p className="font-bold">Used For</p>
+                <p className="text-gray-700/85 text-[12px] text-center antialiased bg-white rounded-xl p-4">
+                  <em>{used_for}</em>
+                </p>
               </div>
             )}
           </div>

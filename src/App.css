@@ -177,7 +177,7 @@ html {
   border-radius: 46px;
   cursor: pointer;
   position: relative;
-  height: 24rem;
+  height: 28rem;
   width: 20rem;
 }
 
@@ -198,7 +198,7 @@ html {
   position: absolute;
   transition: opacity 400ms;
   z-index: 0;
-  height: 24.15rem;
+  height: 28.15rem;
   width: 20.15rem;
 }
 

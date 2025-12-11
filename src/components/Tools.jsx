@@ -11,7 +11,8 @@ const skills = [
   {
     skill: "Figma",
     image: figma,
-    used_for: "Design + Prototyping",
+    used_for:
+      "I rebuilt my Portfolio from scratch 3 times. 3rd time's the charm! I got introduced to Figma and that's how this webpage was designed.",
     about: "Figma is a UI tool...",
     classDark:
       "shadow-green-600 hover:shadow-green-600 bg-gray-700 self-center",
@@ -22,8 +23,9 @@ const skills = [
   {
     skill: "Git",
     image: git,
-    used_for: "Version Control",
-    about: "Git is a distributed version control system...",
+    used_for:
+      "I used Git for version control in all my projects, learned it through GitHub cheetsheets and YouTube tutorials.",
+    about: "Git is a version control system...",
     classDark:
       "shadow-orange-600 hover:shadow-orange-600 bg-gray-700 self-start",
     classLight:
@@ -33,8 +35,9 @@ const skills = [
   {
     skill: "GitHub",
     image: github,
-    used_for: "Code Hosting",
-    about: "GitHub is a platform for hosting and collaborating on code...",
+    used_for:
+      "If you use Git, you use GitHub. I mean you could also use GitLab,... but GitHub is the most popular.",
+    about: "GitHub is for hosting and collaborating on code...",
     classDark: "shadow-gray-600 hover:shadow-gray-600 bg-gray-700 self-end",
     classLight: "shadow-gray-400 hover:shadow-gray-400 bg-gray-200 self-end",
     percentage: 60,
@@ -42,8 +45,9 @@ const skills = [
   {
     skill: "VSCode",
     image: vscode,
-    used_for: "Code Editing",
-    about: "VSCode is a source-code editor developed by Microsoft...",
+    used_for:
+      "I used to code in VSCode, Turbo C++, Dev C++ and Sublime Text. But VSCode became an all in one editor for me.",
+    about: "VSCode is a source-code editor...",
     classDark: "shadow-blue-600 hover:shadow-blue-600 bg-gray-700 self-end",
     classLight: "shadow-blue-400 hover:shadow-blue-400 bg-gray-200 self-end",
     percentage: 80,
@@ -51,8 +55,9 @@ const skills = [
   {
     skill: "Postman",
     image: postman,
-    used_for: "API Testing",
-    about: "Postman is a tool for testing APIs...",
+    used_for:
+      "As I connect my frontend and backend using APIs, I needed a way to test them, hence Postman and Thunder Client are what I use to test.",
+    about: "Postman is for testing APIs...",
     classDark:
       "shadow-orange-600 hover:shadow-orange-600 bg-gray-700 self-start",
     classLight:
@@ -62,7 +67,8 @@ const skills = [
   {
     skill: "ServiceNow",
     image: servicenow,
-    used_for: "IT Service Management",
+    used_for:
+      "I learned ServiceNow through it's platform training modules, got CSA and CAD global certifications. Later I used it in my Type-Together project, now the PDI is expired",
     about:
       "ServiceNow is a cloud-based platform for automating IT management workflows and business processes.",
     classDark:
